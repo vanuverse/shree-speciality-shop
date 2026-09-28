@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | SHREE – The Speciality Shop</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Patrick+Hand&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+    <div class="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+
+    <a href="index.html" class="logo">
+
+        <strong>SHREE ♡</strong>
+
+        <small>The Speciality Shop</small>
+
+    </a>
+
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="products.html">
+            Shop
+            <i class="fa-solid fa-chevron-down"></i>
+        </a>
+
+        <a href="#">Customise</a>
+
+        <a href="#">About Us</a>
+
+        <a href="#">Contact</a>
+
+    </nav>
+
+
+    <div class="nav-right">
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                placeholder="Search for your vibe..."
+            >
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+        </div>
+
+
+        <a href="#" class="nav-icon">
+            <i class="fa-regular fa-heart"></i>
+        </a>
+
+
+        <a href="login.html" class="nav-icon">
+            <i class="fa-regular fa-user"></i>
+        </a>
+
+
+        <a href="cart.html" class="cart-icon">
+
+            <i class="fa-solid fa-bag-shopping"></i>
+
+            <span>2</span>
+
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     LOGIN PAGE
+===================================================== -->
+
+<main class="login-page">
+
+
+    <!-- LEFT IMAGE -->
+    <section class="login-visual">
+
+        <img
+            src="images/login-tshirt.jpg"
+            alt="SHREE Butterfly T-shirt"
+        >
+
+
+        <div class="visual-text text-one">
+            Good<br>
+            Clothes<br>
+            Good<br>
+            Mood ♡
+        </div>
+
+
+        <div class="visual-text text-two">
+            Stay<br>
+            Stylish<br>
+            Stay<br>
+            You ♡
+        </div>
+
+
+        <div class="visual-text text-three">
+            Small<br>
+            Steps<br>
+            Big<br>
+            Dreams ♡
+        </div>
+
+
+        <div class="visual-text welcome">
+            Welcome<br>
+            back ♡
+        </div>
+
+
+        <div class="doodle star-one">✦</div>
+        <div class="doodle star-two">✧</div>
+        <div class="doodle heart-one">♡</div>
+
+    </section>
+
+
+
+    <!-- LOGIN CARD -->
+
+    <section class="login-section">
+
+        <div class="login-card">
+
+
+            <!-- LOGO -->
+
+            <div class="login-logo">
+
+                <h1>SHREE ♡</h1>
+
+                <span>
+                    The Speciality Shop
+                </span>
+
+            </div>
+
+
+            <!-- TITLE -->
+
+            <div class="login-heading">
+
+                <h2>
+                    Login to your account
+                </h2>
+
+                <p>
+                    Your style, your space. ♡
+                </p>
+
+            </div>
+
+
+
+            <!-- FORM -->
+
+            <form id="loginForm">
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label>
+                        Email Address / Mobile Number *
+                    </label>
+
+
+                    <div class="input-wrapper">
+
+                        <i class="fa-regular fa-user"></i>
+
+                        <input
+                            type="text"
+                            id="email"
+                            placeholder="Enter your email or mobile number"
+                            autocomplete="username"
+                            required
+                        >
+
+                    </div>
+
+                    <small
+                        class="error-message"
+                        id="emailError"
+                    ></small>
+
+                </div>
+
+
+
+                <!-- PASSWORD -->
+
+                <div class="form-group">
+
+                    <label>
+                        Password *
+                    </label>
+
+
+                    <div class="input-wrapper">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            id="passwordToggle"
+                        >
+
+                            <i class="fa-regular fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                    <small
+                        class="error-message"
+                        id="passwordError"
+                    ></small>
+
+                </div>
+
+
+
+                <!-- REMEMBER -->
+
+                <div class="login-options">
+
+                    <label class="remember">
+
+                        <input
+                            type="checkbox"
+                            id="rememberMe"
+                        >
+
+                        <span>
+                            Remember me
+                        </span>
+
+                    </label>
+
+
+                    <a href="#" id="forgotPassword">
+                        Forgot Password?
+                    </a>
+
+                </div>
+
+
+
+                <!-- LOGIN -->
+
+                <button
+                    type="submit"
+                    class="login-btn"
+                >
+
+                    <span>Login</span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+            </form>
+
+
+
+            <!-- DIVIDER -->
+
+            <div class="divider">
+
+                <span></span>
+
+                <p>or</p>
+
+                <span></span>
+
+            </div>
+
+
+
+            <!-- GOOGLE -->
+
+            <button
+                class="social-login google-login"
+                id="googleLogin"
+            >
+
+                <span class="google-icon">
+                    G
+                </span>
+
+                Continue with Google
+
+            </button>
+
+
+
+            <!-- APPLE -->
+
+            <button
+                class="social-login apple-login"
+                id="appleLogin"
+            >
+
+                <i class="fa-brands fa-apple"></i>
+
+                Continue with Apple
+
+            </button>
+
+
+
+            <!-- SIGNUP -->
+
+            <p class="signup-text">
+
+                Don't have an account?
+
+                <a href="#">
+                    Sign Up
+                </a>
+
+            </p>
+
+
+            <div
+                class="login-message"
+                id="loginMessage"
+            ></div>
+
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- =====================================================
+     BENEFITS
+===================================================== -->
+
+<section class="login-benefits">
+
+
+    <div class="login-benefit">
+
+        <i class="fa-solid fa-truck"></i>
+
+        <div>
+
+            <strong>
+                Free Shipping
+            </strong>
+
+            <span>
+                On orders over ₹999
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="login-benefit">
+
+        <i class="fa-solid fa-rotate"></i>
+
+        <div>
+
+            <strong>
+                Easy Returns
+            </strong>
+
+            <span>
+                30-day return policy
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="login-benefit">
+
+        <i class="fa-solid fa-lock"></i>
+
+        <div>
+
+            <strong>
+                Secure Payment
+            </strong>
+
+            <span>
+                100% secure checkout
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="login-benefit">
+
+        <i class="fa-solid fa-headphones"></i>
+
+        <div>
+
+            <strong>
+                24/7 Support
+            </strong>
+
+            <span>
+                We're here to help
+            </span>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="login-footer">
+
+
+    <div class="footer-brand">
+
+        <h2>
+            SHREE ♡
+        </h2>
+
+        <p>
+            The Speciality Shop
+        </p>
+
+
+        <div class="social-icons">
+
+            <i class="fa-brands fa-instagram"></i>
+
+            <i class="fa-brands fa-youtube"></i>
+
+            <i class="fa-brands fa-pinterest"></i>
+
+            <i class="fa-brands fa-facebook"></i>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="footer-column">
+
+        <h4>Shop</h4>
+
+        <a href="#">Women</a>
+        <a href="#">Men</a>
+        <a href="#">Kids</a>
+        <a href="#">Customise</a>
+        <a href="#">New Arrivals</a>
+
+    </div>
+
+
+
+    <div class="footer-column">
+
+        <h4>Quick Links</h4>
+
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+        <a href="#">Track Order</a>
+        <a href="#">FAQs</a>
+        <a href="#">Size Guide</a>
+
+    </div>
+
+
+
+    <div class="newsletter">
+
+        <h4>
+            Join Our Community
+        </h4>
+
+        <p>
+            Get updates, offers & more.
+        </p>
+
+
+        <div class="newsletter-input">
+
+            <input
+                type="email"
+                placeholder="Your email address"
+            >
+
+            <button>
+                →
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2025 Shree. All rights reserved.
+        </span>
+
+        <span>
+            Privacy Policy &nbsp; | &nbsp;
+            Terms & Conditions
+        </span>
+
+    </div>
+
+
+</footer>
+
+
+
+<script src="login.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1427 @@
+/* =====================================================
+   SHREE SHOP PAGE
+===================================================== */
+
+:root {
+    --black: #000000;
+    --blue: #a2b8e3;
+    --yellow: #f8fa90;
+    --cream: #fbf9f4;
+    --border: #e4dfd6;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: #111;
+    font-family: "DM Sans", sans-serif;
+}
+
+
+
+/* ================= TOP BAR ================= */
+
+.top-bar {
+    height: 29px;
+
+    background: var(--blue);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 5%;
+
+    font-size: 9px;
+}
+
+
+.top-center {
+    font-family: "Patrick Hand";
+    font-size: 12px;
+}
+
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 73px;
+
+    background: #fffdf9;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 5%;
+
+    gap: 45px;
+
+    border-bottom: 1px solid #eee;
+}
+
+
+.menu-btn {
+    border: none;
+    background: transparent;
+
+    font-size: 23px;
+
+    cursor: pointer;
+}
+
+
+.logo {
+    color: #000;
+
+    text-decoration: none;
+
+    min-width: 170px;
+}
+
+
+.logo-name {
+    font-family: "Patrick Hand";
+
+    font-size: 29px;
+
+    font-weight: 600;
+
+    line-height: 24px;
+}
+
+
+.logo-tagline {
+    font-size: 9px;
+
+    margin-left: 5px;
+}
+
+
+.desktop-nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+    flex: 1;
+}
+
+
+.desktop-nav a {
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    padding: 25px 0;
+
+    position: relative;
+}
+
+
+.desktop-nav a.active {
+    color: #1e437f;
+}
+
+
+.desktop-nav a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 17px;
+
+    height: 2px;
+
+    background: #5274b2;
+}
+
+
+.nav-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+}
+
+
+.search-box {
+    width: 195px;
+
+    height: 33px;
+
+    border: 1px solid #d8d5ce;
+
+    border-radius: 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 11px;
+}
+
+
+.search-box input {
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    font-size: 8px;
+}
+
+
+.search-box span {
+    font-size: 18px;
+}
+
+
+.nav-icon {
+    background: none;
+
+    border: none;
+
+    font-size: 21px;
+
+    cursor: pointer;
+
+    position: relative;
+}
+
+
+.cart-icon span {
+    position: absolute;
+
+    top: -6px;
+    right: -7px;
+
+    background: #000;
+
+    color: white;
+
+    width: 14px;
+    height: 14px;
+
+    border-radius: 50%;
+
+    font-size: 8px;
+
+    display: grid;
+    place-items: center;
+}
+
+
+
+/* ================= MOBILE MENU ================= */
+
+.mobile-menu {
+    display: none;
+}
+
+
+
+/* ================= SHOP HERO ================= */
+
+.shop-hero {
+    height: 125px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            110deg,
+            #e9e1d7,
+            #f4eee5,
+            #e9e0d5
+        );
+}
+
+
+.hero-left {
+    position: absolute;
+
+    left: 17%;
+
+    bottom: -55px;
+}
+
+
+.hero-shirts {
+    display: flex;
+
+    gap: 10px;
+
+    font-size: 100px;
+}
+
+
+.hero-content {
+    position: absolute;
+
+    right: 22%;
+
+    top: 17px;
+
+    text-align: left;
+}
+
+
+.hero-content h1 {
+    margin: 0;
+
+    font-family: "Patrick Hand";
+
+    font-size: 38px;
+
+    display: inline-block;
+
+    background: var(--blue);
+
+    transform: rotate(-3deg);
+
+    padding: 0 10px;
+}
+
+
+.hero-content h2 {
+    margin: -4px 0 0;
+
+    font-family: "Patrick Hand";
+
+    font-size: 22px;
+
+    background: var(--yellow);
+
+    transform: rotate(2deg);
+
+    padding: 0 8px;
+
+    width: max-content;
+}
+
+
+.hero-content p {
+    font-family: "Patrick Hand";
+
+    font-size: 14px;
+
+    margin: 5px 0;
+}
+
+
+
+/* ================= BREADCRUMB ================= */
+
+.breadcrumb {
+    padding: 15px 5% 10px;
+
+    display: flex;
+
+    gap: 10px;
+
+    align-items: center;
+
+    font-size: 9px;
+
+    color: #777;
+}
+
+
+.breadcrumb a {
+    color: #444;
+
+    text-decoration: none;
+}
+
+
+.breadcrumb strong {
+    color: #111;
+}
+
+
+
+/* ================= SHOP LAYOUT ================= */
+
+.shop-layout {
+    display: grid;
+
+    grid-template-columns: 235px 1fr;
+
+    gap: 25px;
+
+    padding: 0 5% 35px;
+}
+
+
+
+/* ================= SIDEBAR ================= */
+
+.filter-sidebar {
+    border-right: 1px solid var(--border);
+
+    padding-right: 22px;
+
+    min-height: 650px;
+}
+
+
+.filter-heading {
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 13px;
+}
+
+
+.category {
+    width: 100%;
+
+    border: none;
+
+    background: transparent;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 7px 8px;
+
+    font-size: 10px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    border-radius: 3px;
+}
+
+
+.category small {
+    margin-left: auto;
+
+    color: #777;
+}
+
+
+.category.active {
+    background: #dce5f6;
+
+    color: #284a83;
+
+    font-weight: 600;
+}
+
+
+.filter-box {
+    border-top: 1px solid var(--border);
+
+    padding: 13px 0;
+}
+
+
+.filter-title {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    font-size: 10px;
+
+    cursor: pointer;
+}
+
+
+.filter-content {
+    margin-top: 12px;
+}
+
+
+.price-line {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.price-line input {
+    width: 100%;
+
+    accent-color: #5274a9;
+}
+
+
+.price-values {
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 8px;
+
+    color: #777;
+}
+
+
+.size-filter {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+}
+
+
+.size-filter button {
+    width: 34px;
+
+    height: 24px;
+
+    border: 1px solid #ddd8cf;
+
+    background: transparent;
+
+    border-radius: 3px;
+
+    font-size: 8px;
+
+    cursor: pointer;
+}
+
+
+.size-filter button:hover {
+    border-color: #5274a9;
+}
+
+
+.colour-filter {
+    display: flex;
+
+    gap: 9px;
+}
+
+
+.colour-filter button {
+    width: 18px;
+
+    height: 18px;
+
+    border-radius: 50%;
+
+    border: 1px solid #ddd;
+
+    cursor: pointer;
+}
+
+
+.c-black {
+    background: #101010;
+}
+
+.c-white {
+    background: #fff;
+}
+
+.c-grey {
+    background: #9d9d95;
+}
+
+.c-pink {
+    background: #efa7b8;
+}
+
+.c-blue {
+    background: #8dbbe0;
+}
+
+.c-yellow {
+    background: #e9dc72;
+}
+
+.c-purple {
+    background: #b19ac9;
+}
+
+
+.sidebar-note {
+    font-family: "Patrick Hand";
+
+    font-size: 23px;
+
+    line-height: .85;
+
+    margin: 25px 5px;
+
+    transform: rotate(-4deg);
+}
+
+
+.sidebar-note span {
+    display: block;
+
+    font-size: 15px;
+
+    margin-top: 10px;
+}
+
+
+
+/* ================= PRODUCTS AREA ================= */
+
+.products-area {
+    min-width: 0;
+}
+
+
+.products-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+}
+
+
+.products-header h1 {
+    font-family: "Patrick Hand";
+
+    font-size: 34px;
+
+    font-weight: 500;
+
+    margin: 0;
+}
+
+
+.products-header p {
+    font-family: "Patrick Hand";
+
+    color: #777;
+
+    font-size: 14px;
+
+    margin: -2px 0 0;
+}
+
+
+.sort-box {
+    border: 1px solid #d9d4cc;
+
+    border-radius: 7px;
+
+    padding: 0 10px;
+
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    font-size: 9px;
+}
+
+
+.sort-box select {
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    font-size: 9px;
+
+    min-width: 100px;
+}
+
+
+
+/* ================= PRODUCT GRID ================= */
+
+.product-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px 17px;
+}
+
+
+.product-card {
+    cursor: pointer;
+
+    min-width: 0;
+}
+
+
+.product-image {
+    height: 205px;
+
+    background: #e8e1d8;
+
+    border-radius: 7px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    display: grid;
+
+    place-items: center;
+}
+
+
+.product-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    position: absolute;
+
+    inset: 0;
+}
+
+
+.product-image img:not([style*="display: none"]) + .placeholder-shirt,
+.product-image img:not([style*="display: none"]) + .placeholder-kurti {
+    display: none;
+}
+
+
+.product-badge {
+    position: absolute;
+
+    z-index: 3;
+
+    left: 9px;
+    top: 9px;
+
+    padding: 4px 9px;
+
+    border-radius: 10px;
+
+    font-size: 8px;
+
+    font-weight: 600;
+}
+
+
+.product-badge.new {
+    background: var(--yellow);
+}
+
+
+.product-badge.bestseller {
+    background: #78b9e6;
+
+    color: white;
+}
+
+
+.wishlist {
+    position: absolute;
+
+    z-index: 4;
+
+    right: 8px;
+    top: 8px;
+
+    width: 25px;
+    height: 25px;
+
+    border: none;
+
+    background: white;
+
+    border-radius: 50%;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+
+.wishlist.active {
+    color: #111;
+
+    background: var(--yellow);
+}
+
+
+.product-info {
+    padding: 7px 9px 0;
+}
+
+
+.product-info h3 {
+    font-size: 9px;
+
+    font-weight: 500;
+
+    line-height: 1.35;
+
+    margin: 0 0 6px;
+}
+
+
+.product-info strong {
+    font-size: 10px;
+}
+
+
+.product-colours {
+    display: flex;
+
+    gap: 6px;
+
+    margin-top: 7px;
+}
+
+
+.dot {
+    width: 11px;
+
+    height: 11px;
+
+    border-radius: 50%;
+
+    border: 1px solid #ccc;
+}
+
+
+.dot.black {
+    background: #111;
+}
+
+.dot.white {
+    background: white;
+}
+
+.dot.red {
+    background: #bd354d;
+}
+
+.dot.purple {
+    background: #b193c8;
+}
+
+.dot.pink {
+    background: #e99eb2;
+}
+
+.dot.beige {
+    background: #d6c8af;
+}
+
+.dot.blue {
+    background: #7199d2;
+}
+
+.dot.cream {
+    background: #eee8d9;
+}
+
+.dot.sage {
+    background: #899b7d;
+}
+
+.dot.yellow {
+    background: #e4d84e;
+}
+
+.dot.maroon {
+    background: #741d35;
+}
+
+.dot.grey {
+    background: #a3a3a0;
+}
+
+
+
+/* ================= PLACEHOLDERS ================= */
+
+.placeholder-shirt {
+    width: 115px;
+
+    height: 145px;
+
+    clip-path: polygon(
+        23% 0,
+        42% 9%,
+        58% 9%,
+        77% 0,
+        100% 20%,
+        84% 42%,
+        76% 32%,
+        76% 100%,
+        24% 100%,
+        24% 32%,
+        16% 42%,
+        0 20%
+    );
+
+    display: grid;
+
+    place-items: center;
+
+    text-align: center;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.white-shirt {
+    background: #f4f1e8;
+
+    color: #c73551;
+}
+
+
+.purple-shirt {
+    background: #ad91c5;
+
+    font-size: 26px;
+}
+
+
+.black-shirt {
+    background: #151515;
+
+    color: white;
+
+    font-size: 13px;
+}
+
+
+.sage-shirt {
+    background: #91a189;
+
+    color: #46523f;
+
+    font-size: 8px;
+}
+
+
+.cream-shirt {
+    background: #eee8d8;
+
+    font-size: 18px;
+}
+
+
+.dark-shirt {
+    background: #202124;
+
+    color: white;
+
+    font-size: 9px;
+}
+
+
+.beige-shirt {
+    background: #e4d6ca;
+
+    font-size: 30px;
+}
+
+
+.striped-shirt {
+    background:
+        repeating-linear-gradient(
+            90deg,
+            #80a5cf 0 9px,
+            #f5f1e7 9px 18px
+        );
+}
+
+
+.placeholder-kurti {
+    width: 100px;
+
+    height: 155px;
+
+    border-radius: 45% 45% 12px 12px;
+
+    background: #e6ded0;
+
+    display: grid;
+
+    place-items: center;
+
+    color: #6582a2;
+
+    font-size: 25px;
+}
+
+
+.pink-kurti {
+    background: #dca4aa;
+}
+
+
+.purple-kurti {
+    background: #a99bc3;
+}
+
+
+.placeholder-bag {
+    width: 100px;
+
+    height: 95px;
+
+    border-radius: 10px 10px 15px 15px;
+
+    background: #e4d9c6;
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 27px;
+
+    position: relative;
+}
+
+
+.placeholder-bag::before {
+    content: "";
+
+    position: absolute;
+
+    width: 45px;
+
+    height: 35px;
+
+    border: 6px solid #bba98e;
+
+    border-bottom: none;
+
+    border-radius: 30px 30px 0 0;
+
+    top: -29px;
+}
+
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background: #111;
+
+    color: white;
+
+    display: grid;
+
+    grid-template-columns:
+        1.3fr
+        .8fr
+        .9fr
+        1.5fr
+        2fr;
+
+    gap: 35px;
+
+    padding: 30px 5% 45px;
+
+    position: relative;
+}
+
+
+.footer-logo {
+    font-family: "Patrick Hand";
+
+    font-size: 27px;
+}
+
+
+.footer p,
+.footer a {
+    font-size: 8px;
+
+    color: #ddd;
+}
+
+
+.footer a {
+    display: block;
+
+    margin: 6px 0;
+}
+
+
+.footer h4 {
+    font-size: 9px;
+
+    margin: 0 0 10px;
+}
+
+
+.socials {
+    font-size: 10px;
+
+    margin-top: 12px;
+}
+
+
+.email-box {
+    height: 30px;
+
+    display: flex;
+
+    border: 1px solid #777;
+
+    max-width: 230px;
+}
+
+
+.email-box input {
+    flex: 1;
+
+    background: transparent;
+
+    border: none;
+
+    outline: none;
+
+    color: white;
+
+    padding: 0 8px;
+
+    font-size: 8px;
+}
+
+
+.email-box button {
+    width: 35px;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+
+.footer-benefits {
+    display: flex;
+
+    gap: 15px;
+}
+
+
+.footer-benefits > div {
+    display: flex;
+
+    gap: 7px;
+
+    font-size: 16px;
+}
+
+
+.footer-benefits span {
+    font-size: 8px;
+}
+
+
+.footer-benefits small {
+    display: block;
+
+    color: #999;
+
+    font-size: 6px;
+
+    margin-top: 3px;
+}
+
+
+.footer-bottom {
+    position: absolute;
+
+    bottom: 10px;
+
+    left: 5%;
+    right: 5%;
+
+    border-top: 1px solid #444;
+
+    padding-top: 7px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 6px;
+
+    color: #aaa;
+}
+
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .top-bar {
+        height: 25px;
+
+        padding: 0 12px;
+
+        font-size: 7px;
+    }
+
+
+    .top-center,
+    .top-right {
+        display: none;
+    }
+
+
+    .navbar {
+        height: 65px;
+
+        padding: 0 14px;
+
+        gap: 12px;
+    }
+
+
+    .logo {
+        min-width: 115px;
+    }
+
+
+    .logo-name {
+        font-size: 23px;
+    }
+
+
+    .logo-tagline {
+        font-size: 6px;
+    }
+
+
+    .desktop-nav {
+        display: none;
+    }
+
+
+    .nav-actions {
+        margin-left: auto;
+
+        gap: 8px;
+    }
+
+
+    .search-box {
+        display: none;
+    }
+
+
+    .nav-icon {
+        font-size: 18px;
+    }
+
+
+    .shop-hero {
+        height: 125px;
+    }
+
+
+    .hero-left {
+        left: -25px;
+    }
+
+
+    .hero-shirts {
+        font-size: 75px;
+    }
+
+
+    .hero-content {
+        right: 22px;
+
+        top: 15px;
+    }
+
+
+    .hero-content h1 {
+        font-size: 29px;
+    }
+
+
+    .hero-content h2 {
+        font-size: 18px;
+    }
+
+
+    .hero-content p {
+        font-size: 11px;
+    }
+
+
+    .breadcrumb {
+        padding: 10px 15px;
+
+        font-size: 8px;
+    }
+
+
+    .shop-layout {
+        display: block;
+
+        padding: 0 14px 25px;
+    }
+
+
+    .filter-sidebar {
+        display: none;
+    }
+
+
+    .products-header {
+        align-items: flex-end;
+
+        margin-bottom: 12px;
+    }
+
+
+    .products-header h1 {
+        font-size: 29px;
+    }
+
+
+    .products-header p {
+        font-size: 12px;
+    }
+
+
+    .sort-box {
+        height: 32px;
+
+        padding: 0 7px;
+    }
+
+
+    .sort-box label {
+        display: none;
+    }
+
+
+    .sort-box select {
+        min-width: 100px;
+
+        font-size: 8px;
+    }
+
+
+    .product-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 14px 9px;
+    }
+
+
+    .product-image {
+        height: 175px;
+    }
+
+
+    .product-info {
+        padding: 6px 4px;
+    }
+
+
+    .product-info h3 {
+        font-size: 8px;
+    }
+
+
+    .product-info strong {
+        font-size: 9px;
+    }
+
+
+    .dot {
+        width: 9px;
+
+        height: 9px;
+    }
+
+
+    .placeholder-shirt {
+        width: 95px;
+
+        height: 125px;
+    }
+
+
+    .placeholder-kurti {
+        width: 85px;
+
+        height: 130px;
+    }
+
+
+    .footer {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 25px;
+
+        padding: 25px 15px 55px;
+    }
+
+
+    .footer-benefits {
+        grid-column: 1 / -1;
+
+        flex-wrap: wrap;
+    }
+
+
+    .footer-bottom {
+        left: 15px;
+        right: 15px;
+
+        font-size: 5px;
+    }
+
+}

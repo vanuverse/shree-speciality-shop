@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Cart | SHREE – The Speciality Shop</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
+
+<div class="top-bar">
+
+    <div class="shipping">
+        <i class="fa-solid fa-truck"></i>
+        Free Shipping on orders over ₹999
+    </div>
+
+    <div class="top-links">
+
+        <a href="#">Track Order</a>
+        <span>|</span>
+
+        <a href="#">Help</a>
+        <span>|</span>
+
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-pinterest"></i>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+    <div class="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <a href="index.html" class="logo">
+
+        <strong>SHREE ♡</strong>
+        <small>The Speciality Shop</small>
+
+    </a>
+
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="products.html">
+            Shop <i class="fa-solid fa-chevron-down"></i>
+        </a>
+
+        <a href="#">Customise</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+
+    </nav>
+
+
+    <div class="nav-right">
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                placeholder="Search for your vibe..."
+            >
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+        </div>
+
+        <i class="fa-regular fa-heart nav-icon"></i>
+
+        <i class="fa-regular fa-user nav-icon"></i>
+
+        <div class="cart-icon">
+
+            <i class="fa-solid fa-bag-shopping"></i>
+
+            <span id="cartCount">2</span>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     CART HERO
+===================================================== -->
+
+<section class="cart-hero">
+
+    <div>
+
+        <h1>Your Cart</h1>
+
+        <p>
+            Good choices. Better vibes. ♡
+        </p>
+
+    </div>
+
+
+    <div class="cart-doodle">
+
+        <span>
+            Small<br>
+            steps<br>
+            Big<br>
+            style ♡
+        </span>
+
+        <div class="blue-brush"></div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CART MAIN
+===================================================== -->
+
+<main class="cart-container">
+
+
+    <!-- =================================================
+         PRODUCTS
+    ================================================== -->
+
+    <section class="cart-products">
+
+        <div class="cart-table-head">
+
+            <span>Product Details</span>
+            <span>Size / Colour</span>
+            <span>Quantity</span>
+            <span>Price</span>
+            <span>Total</span>
+
+        </div>
+
+
+        <!-- PRODUCT 1 -->
+
+        <article
+            class="cart-product"
+            data-price="899"
+        >
+
+            <div class="product-details">
+
+                <div class="cart-image">
+
+                    <img
+                        src="images/butterfly-tshirt.jpg"
+                        alt="Butterfly Vibes Oversized T-shirt"
+                    >
+
+                    <button class="wishlist-small">
+                        ♡
+                    </button>
+
+                </div>
+
+
+                <div class="cart-product-info">
+
+                    <h3>
+                        Butterfly Vibes<br>
+                        Oversized T-shirt
+                    </h3>
+
+                    <strong>₹899</strong>
+
+                    <span class="customisable">
+                        <i class="fa-solid fa-pen"></i>
+                        Customisable
+                    </span>
+
+                    <div class="colour-dots">
+
+                        <span style="background:#a884d4"></span>
+                        <span style="background:#f4a6bd"></span>
+                        <span style="background:#171717"></span>
+                        <span style="background:#e4d5bd"></span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="size-colour">
+
+                <strong>M</strong>
+
+                <span>
+                    <i class="fa-solid fa-circle"></i>
+                    Lavender
+                </span>
+
+            </div>
+
+
+            <div class="quantity-control">
+
+                <button onclick="changeQuantity(this,-1)">
+                    −
+                </button>
+
+                <span>1</span>
+
+                <button onclick="changeQuantity(this,1)">
+                    +
+                </button>
+
+            </div>
+
+
+            <div class="product-price">
+                ₹899
+            </div>
+
+
+            <div class="product-total">
+                ₹899
+            </div>
+
+
+            <button
+                class="remove-product"
+                onclick="removeProduct(this)"
+            >
+
+                <i class="fa-regular fa-trash-can"></i>
+
+            </button>
+
+        </article>
+
+
+
+        <!-- PRODUCT 2 -->
+
+        <article
+            class="cart-product"
+            data-price="799"
+        >
+
+            <div class="product-details">
+
+                <div class="cart-image">
+
+                    <img
+                        src="images/good-things-tshirt.jpg"
+                        alt="Good Things T-shirt"
+                    >
+
+                    <button class="wishlist-small">
+                        ♡
+                    </button>
+
+                </div>
+
+
+                <div class="cart-product-info">
+
+                    <h3>
+                        Good Things<br>
+                        T-shirt
+                    </h3>
+
+                    <strong>₹799</strong>
+
+                    <div class="colour-dots">
+
+                        <span style="background:#f7f7f7"></span>
+                        <span style="background:#f0db73"></span>
+                        <span style="background:#d7b866"></span>
+                        <span style="background:#75aaa1"></span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="size-colour">
+
+                <strong>L</strong>
+
+                <span>
+                    <i class="fa-regular fa-circle"></i>
+                    White
+                </span>
+
+            </div>
+
+
+            <div class="quantity-control">
+
+                <button onclick="changeQuantity(this,-1)">
+                    −
+                </button>
+
+                <span>1</span>
+
+                <button onclick="changeQuantity(this,1)">
+                    +
+                </button>
+
+            </div>
+
+
+            <div class="product-price">
+                ₹799
+            </div>
+
+
+            <div class="product-total">
+                ₹799
+            </div>
+
+
+            <button
+                class="remove-product"
+                onclick="removeProduct(this)"
+            >
+
+                <i class="fa-regular fa-trash-can"></i>
+
+            </button>
+
+        </article>
+
+
+        <!-- =================================================
+             COUPON
+        ================================================== -->
+
+        <div class="cart-coupon">
+
+            <div class="coupon-title">
+
+                <i class="fa-regular fa-tag"></i>
+
+                <span>
+                    Have a coupon code?
+                </span>
+
+            </div>
+
+
+            <div class="coupon-form">
+
+                <input
+                    type="text"
+                    id="couponCode"
+                    placeholder="Enter coupon code"
+                >
+
+                <button onclick="applyCoupon()">
+                    Apply
+                </button>
+
+            </div>
+
+            <p id="couponMessage"></p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         ORDER SUMMARY
+    ================================================== -->
+
+    <aside class="order-summary">
+
+        <h2>Order Summary</h2>
+
+
+        <div class="summary-row">
+
+            <span>Subtotal (2 items)</span>
+            <strong id="subtotal">₹1,698</strong>
+
+        </div>
+
+
+        <div class="summary-row">
+
+            <span>Shipping Charges</span>
+            <strong id="shipping">₹99</strong>
+
+        </div>
+
+
+        <div class="summary-row">
+
+            <span>Coupon Discount</span>
+            <strong id="discount">− ₹0</strong>
+
+        </div>
+
+
+        <hr>
+
+
+        <div class="summary-total">
+
+            <span>Total Amount</span>
+
+            <strong id="grandTotal">
+                ₹1,797
+            </strong>
+
+        </div>
+
+
+        <!-- FREE SHIPPING -->
+
+        <div class="free-shipping-box">
+
+            <i class="fa-solid fa-truck"></i>
+
+            <div>
+
+                <strong>Free Shipping</strong>
+
+                <span>
+                    On orders over ₹999
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- CHECKOUT -->
+
+        <button
+            class="checkout-btn"
+            onclick="goToCheckout()"
+        >
+
+            Proceed to Checkout
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </button>
+
+
+        <div class="or-line">
+
+            <span>or</span>
+
+        </div>
+
+
+        <button
+            class="continue-shopping"
+            onclick="continueShopping()"
+        >
+
+            Continue Shopping
+
+        </button>
+
+    </aside>
+
+</main>
+
+
+<!-- =====================================================
+     BENEFITS
+===================================================== -->
+
+<section class="cart-benefits">
+
+    <div class="benefit">
+
+        <i class="fa-solid fa-truck"></i>
+
+        <div>
+            <strong>Free Shipping</strong>
+            <span>On orders over ₹999</span>
+        </div>
+
+    </div>
+
+
+    <div class="benefit">
+
+        <i class="fa-solid fa-rotate"></i>
+
+        <div>
+            <strong>Easy Returns</strong>
+            <span>30-day return policy</span>
+        </div>
+
+    </div>
+
+
+    <div class="benefit">
+
+        <i class="fa-solid fa-lock"></i>
+
+        <div>
+            <strong>Secure Payment</strong>
+            <span>100% secure checkout</span>
+        </div>
+
+    </div>
+
+
+    <div class="benefit">
+
+        <i class="fa-solid fa-headphones"></i>
+
+        <div>
+            <strong>24/7 Support</strong>
+            <span>We're here to help</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-brand">
+
+        <h2>SHREE ♡</h2>
+        <p>The Speciality Shop</p>
+
+        <div class="socials">
+
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-pinterest"></i>
+            <i class="fa-brands fa-facebook"></i>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-column">
+
+        <h4>Shop</h4>
+
+        <a href="#">Women</a>
+        <a href="#">Men</a>
+        <a href="#">Kids</a>
+        <a href="#">Customise</a>
+        <a href="#">New Arrivals</a>
+
+    </div>
+
+
+    <div class="footer-column">
+
+        <h4>Quick Links</h4>
+
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+        <a href="#">Track Order</a>
+        <a href="#">FAQs</a>
+        <a href="#">Size Guide</a>
+
+    </div>
+
+
+    <div class="newsletter">
+
+        <h4>Join Our Community</h4>
+
+        <p>Get updates, offers & more.</p>
+
+        <div>
+
+            <input
+                type="email"
+                placeholder="Your email address"
+            >
+
+            <button>→</button>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-payment">
+
+        <span>♡</span>
+        <span>Instagram</span>
+        <span>Visa</span>
+        <span>RuPay</span>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2025 Shree. All rights reserved.
+        </span>
+
+        <span>
+            Privacy Policy&nbsp;&nbsp; | &nbsp;&nbsp;
+            Terms & Conditions
+        </span>
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     MOBILE BOTTOM NAV
+===================================================== -->
+
+<div class="mobile-bottom-nav">
+
+    <a href="index.html">
+
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+
+    </a>
+
+
+    <a href="products.html">
+
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span>Shop</span>
+
+    </a>
+
+
+    <a href="#">
+
+        <i class="fa-regular fa-heart"></i>
+        <span>Wishlist</span>
+
+    </a>
+
+
+    <a href="cart.html" class="active">
+
+        <i class="fa-solid fa-bag-shopping"></i>
+
+        <b>2</b>
+
+        <span>Cart</span>
+
+    </a>
+
+
+    <a href="#">
+
+        <i class="fa-regular fa-user"></i>
+        <span>Account</span>
+
+    </a>
+
+</div>
+
+
+<script src="cart.js"></script>
+
+</body>
+</html>

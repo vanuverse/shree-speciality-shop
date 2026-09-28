@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shop | SHREE – The Speciality Shop</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="products.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Patrick+Hand&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+
+<!-- ================= TOP BAR ================= -->
+
+<div class="top-bar">
+
+    <div>
+        🚚 Free Shipping on orders over ₹999
+    </div>
+
+    <div class="top-center">
+        Small designs ✧ Big personalities ♡
+    </div>
+
+    <div class="top-right">
+        Track Order &nbsp; | &nbsp; Help &nbsp; | &nbsp; ◎ &nbsp; ◉ &nbsp; Pinterest
+    </div>
+
+</div>
+
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <button class="menu-btn" onclick="openMenu()">
+        ☰
+    </button>
+
+
+    <a href="index.html" class="logo">
+
+        <div class="logo-name">
+            SHREE ♡
+        </div>
+
+        <div class="logo-tagline">
+            The Speciality Shop
+        </div>
+
+    </a>
+
+
+    <nav class="desktop-nav">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="products.html" class="active">
+            Shop
+        </a>
+
+        <a href="#">
+            Customise
+        </a>
+
+        <a href="#">
+            About Us
+        </a>
+
+        <a href="#">
+            Contact
+        </a>
+
+    </nav>
+
+
+    <div class="nav-actions">
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for your vibe...">
+
+            <span>⌕</span>
+
+        </div>
+
+        <button class="nav-icon">
+            ♡
+        </button>
+
+        <button class="nav-icon">
+            ♙
+        </button>
+
+        <button class="nav-icon cart-icon"
+            onclick="location.href='cart.html'">
+
+            ♧
+
+            <span id="cartCount">
+                0
+            </span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- ================= MOBILE MENU ================= -->
+
+<div class="mobile-menu" id="mobileMenu">
+
+    <button class="close-menu" onclick="closeMenu()">
+        ×
+    </button>
+
+    <a href="index.html">Home</a>
+    <a href="products.html">Shop</a>
+    <a href="#">Customise</a>
+    <a href="#">About Us</a>
+    <a href="#">Contact</a>
+    <a href="login.html">Account</a>
+
+</div>
+
+
+
+<!-- ================= SHOP HERO ================= -->
+
+<section class="shop-hero">
+
+    <div class="hero-left">
+
+        <div class="hero-shirts">
+            <span>🩷</span>
+            <span>🤍</span>
+            <span>🖤</span>
+        </div>
+
+    </div>
+
+
+    <div class="hero-content">
+
+        <h1>
+            <span>Shop</span>
+        </h1>
+
+        <h2>
+            The Latest Looks ♡
+        </h2>
+
+        <p>
+            Same vibe, new designs...
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= BREADCRUMB ================= -->
+
+<div class="breadcrumb">
+
+    <a href="index.html">
+        Home
+    </a>
+
+    <span>›</span>
+
+    <a href="products.html">
+        Shop
+    </a>
+
+    <span>›</span>
+
+    <strong>
+        Women
+    </strong>
+
+</div>
+
+
+
+<!-- ================= MAIN SHOP ================= -->
+
+<main class="shop-layout">
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="filter-sidebar">
+
+
+        <div class="filter-heading">
+            <span>☷</span>
+            Categories
+        </div>
+
+
+        <div class="category-list">
+
+            <button class="category active"
+                onclick="filterCategory('Women', this)">
+
+                <span>›</span>
+                Women
+
+                <small>(48)</small>
+
+            </button>
+
+
+            <button class="category"
+                onclick="filterCategory('Men', this)">
+
+                <span>›</span>
+                Men
+
+                <small>(42)</small>
+
+            </button>
+
+
+            <button class="category"
+                onclick="filterCategory('Kids', this)">
+
+                <span>›</span>
+                Kids
+
+                <small>(28)</small>
+
+            </button>
+
+
+            <button class="category"
+                onclick="filterCategory('Customise', this)">
+
+                <span>›</span>
+                Customise
+
+                <small>(35)</small>
+
+            </button>
+
+
+            <button class="category"
+                onclick="filterCategory('Couple', this)">
+
+                <span>›</span>
+                Couple
+
+                <small>(18)</small>
+
+            </button>
+
+
+            <button class="category"
+                onclick="filterCategory('Accessories', this)">
+
+                <span>›</span>
+                Accessories
+
+                <small>(26)</small>
+
+            </button>
+
+
+            <button class="category"
+                onclick="filterCategory('Festival', this)">
+
+                <span>›</span>
+                Festival / Special
+
+                <small>(24)</small>
+
+            </button>
+
+
+            <button class="category"
+                onclick="filterCategory('New Arrivals', this)">
+
+                <span>›</span>
+                New Arrivals
+
+                <small>(16)</small>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- PRICE -->
+
+        <div class="filter-box">
+
+            <div class="filter-title"
+                onclick="toggleFilter(this)">
+
+                <span>
+                    ⚙ &nbsp; Filter By
+                </span>
+
+                <span>⌃</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="filter-box">
+
+            <div class="filter-title"
+                onclick="toggleFilter(this)">
+
+                <span>Price</span>
+
+                <span>⌃</span>
+
+            </div>
+
+
+            <div class="filter-content">
+
+                <div class="price-line">
+
+                    <input
+                        type="range"
+                        min="0"
+                        max="2999"
+                        value="0"
+                        id="minPrice">
+
+                    <input
+                        type="range"
+                        min="0"
+                        max="2999"
+                        value="2999"
+                        id="maxPrice">
+
+                </div>
+
+
+                <div class="price-values">
+
+                    <span>
+                        ₹0
+                    </span>
+
+                    <span>
+                        ₹2999
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SIZE -->
+
+        <div class="filter-box">
+
+            <div class="filter-title"
+                onclick="toggleFilter(this)">
+
+                <span>Size</span>
+
+                <span>⌃</span>
+
+            </div>
+
+
+            <div class="filter-content">
+
+                <div class="size-filter">
+
+                    <button>XXS</button>
+                    <button>XS</button>
+                    <button>S</button>
+                    <button>M</button>
+                    <button>L</button>
+                    <button>XL</button>
+                    <button>XXL</button>
+                    <button>3XL</button>
+                    <button>4XL</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- COLOUR -->
+
+        <div class="filter-box">
+
+            <div class="filter-title"
+                onclick="toggleFilter(this)">
+
+                <span>Colour</span>
+
+                <span>⌃</span>
+
+            </div>
+
+
+            <div class="filter-content">
+
+                <div class="colour-filter">
+
+                    <button class="c-black"></button>
+                    <button class="c-white"></button>
+                    <button class="c-grey"></button>
+                    <button class="c-pink"></button>
+                    <button class="c-blue"></button>
+                    <button class="c-yellow"></button>
+                    <button class="c-purple"></button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- OTHER FILTERS -->
+
+        <div class="filter-box collapsed">
+
+            <div class="filter-title">
+
+                <span>Product Type</span>
+
+                <span>⌄</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="filter-box collapsed">
+
+            <div class="filter-title">
+
+                <span>Print Style</span>
+
+                <span>⌄</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="filter-box collapsed">
+
+            <div class="filter-title">
+
+                <span>Occasion</span>
+
+                <span>⌄</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="sidebar-note">
+
+            Good<br>
+            Clothes<br>
+            Good<br>
+            Mood
+
+            <span>☺ ✧</span>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ================= PRODUCTS AREA ================= -->
+
+    <section class="products-area">
+
+
+        <div class="products-header">
+
+            <div>
+
+                <h1>
+                    Women ♡
+                </h1>
+
+                <p>
+                    Trendy fits. Comfy days. You.
+                </p>
+
+            </div>
+
+
+            <div class="sort-box">
+
+                <label>
+                    Sort by:
+                </label>
+
+                <select id="sortProducts"
+                    onchange="sortProducts()">
+
+                    <option value="featured">
+                        Featured
+                    </option>
+
+                    <option value="low">
+                        Price: Low to High
+                    </option>
+
+                    <option value="high">
+                        Price: High to Low
+                    </option>
+
+                    <option value="new">
+                        New Arrivals
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= PRODUCT GRID ================= -->
+
+        <div class="product-grid" id="productGrid">
+
+
+
+            <!-- PRODUCT 1 -->
+
+            <article class="product-card"
+                data-category="Women"
+                data-price="999"
+                data-new="true">
+
+                <div class="product-image">
+
+                    <span class="product-badge new">
+                        New
+                    </span>
+
+                    <button class="wishlist"
+                        onclick="toggleWishlist(this)">
+                        ♡
+                    </button>
+
+                    <img
+                        src="images/products/hibiscus.jpg"
+                        alt="Hibiscus Bloom Oversized T-shirt"
+                        onerror="this.style.display='none'">
+
+                    <div class="placeholder-shirt white-shirt">
+                        ✿
+                    </div>
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <h3>
+                        Hibiscus Bloom Oversized T-shirt
+                    </h3>
+
+                    <strong>
+                        ₹999
+                    </strong>
+
+
+                    <div class="product-colours">
+
+                        <span class="dot black"></span>
+                        <span class="dot white"></span>
+                        <span class="dot red"></span>
+                        <span class="dot purple"></span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PRODUCT 2 -->
+
+            <article class="product-card"
+                data-category="Women"
+                data-price="899"
+                data-new="true">
+
+                <div class="product-image">
+
+                    <span class="product-badge bestseller">
+                        Bestseller
+                    </span>
+
+                    <button class="wishlist"
+                        onclick="toggleWishlist(this)">
+                        ♡
+                    </button>
+
+                    <img
+                        src="images/products/butterfly-1.jpg"
+                        alt="Butterfly Vibes Oversized T-shirt"
+                        onerror="this.style.display='none'">
+
+                    <div class="placeholder-shirt purple-shirt">
+                        🦋
+                    </div>
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <h3>
+                        Butterfly Vibes Oversized T-shirt
+                    </h3>
+
+                    <strong>
+                        ₹899
+                    </strong>
+
+
+                    <div class="product-colours">
+
+                        <span class="dot purple"></span>
+                        <span class="dot pink"></span>
+                        <span class="dot beige"></span>
+                        <span class="dot black"></span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PRODUCT 3 -->
+
+            <article class="product-card"
+                data-category="Women"
+                data-price="1299">
+
+                <div class="product-image">
+
+                    <button class="wishlist"
+                        onclick="toggleWishlist(this)">
+                        ♡
+                    </button>
+
+                    <img
+                        src="images/products/floral-kurti.jpg"
+                        alt="Floral Block Print Kurti"
+                        onerror="this.style.display='none'">
+
+                    <div class="placeholder-kurti">
+                        ✿
+                    </div>
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <h3>
+                        Floral Block Print Kurti
+                    </h3>
+
+                    <strong>
+                        ₹1,299
+                    </strong>
+
+
+                    <div class="product-colours">
+
+                        <span class="dot blue"></span>
+                        <span class="dot cream"></span>
+                        <span class="dot pink"></span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PRODUCT 4 -->
+
+            <article class="product-card"
+                data-category="Women"
+                data-price="699">
+
+                <div class="product-image">
+
+                    <span class="product-badge new">
+                        New
+                    </span>
+
+                    <button class="wishlist"
+                        onclick="toggleWishlist(this)">
+                        ♡
+                    </button>
+
+                    <img
+                        src="images/products/malvani.jpg"
+                        alt="Malvani Gang Oversized T-shirt"
+                        onerror="this.style.display='none'">
+
+                    <div class="placeholder-shirt black-shirt">
+                        मालवणी<br>गँग
+                    </div>
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <h3>
+                        Malvani Gang Oversized T-shirt
+                    </h3>
+
+                    <strong>
+                        ₹699
+                    </strong>
+
+
+                    <div class="product-colours">
+
+                        <span class="dot black"></span>
+                        <span class="dot blue"></span>
+                        <span class="dot beige"></span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PRODUCT 5 -->
+
+            <article class="product-card"
+                data-category="Women"
+                data-price="799">
+
+                <div class="product-image">
+
+                    <button class="wishlist"
+                        onclick="toggleWishlist(this)">
+                        ♡
+                    </button>
+
+                    <img
+                        src="images/products/minimal.jpg"
+                        alt="Minimal Text Oversized T-shirt"
+                        onerror="this.style.display='none'">
+
+                    <div class="placeholder-shirt sage-shirt">
+                        GOOD<br>
+                        THINGS<br>
+                        TAKE TIME
+                    </div>
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <h3>
+                        Minimal Text Oversized T-shirt
+                    </h3>
+
+                    <strong>
+                        ₹799
+                    </strong>
+
+                    <div class="product-colours">
+
+                        <span class="dot sage"></span>
+                        <span class="dot cream"></span>
+                        <span class="dot black"></span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PRODUCT 6 -->
+
+            <article class="product-card"
+                data-category="Women"
+                data-price="1499">
+
+                <div class="product-image">
+
+                    <button class="wishlist"
+                        onclick="toggleWishlist(this)">
+                        ♡
+                    </button>
+
+                    <img
+                        src="images/products/embroidered-kurti.jpg"
+                        alt="Embroidered Kurti"
+                        onerror="this.style.display='none'">
+
+                    <div class="placeholder-kurti pink-kurti">
+                        ✿
+                    </div>
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <h3>
+                        Embroidered Kurti
+                    </h3>
+
+                    <strong>
+                        ₹1,499
+                    </strong>
+
+                    <div class="product-colours">
+
+                        <span class="dot pink"></span>
+                        <span class="dot maroon"></span>
+                        <span class="dot cream"></span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PRODUCT 7 -->
+
+            <article class="product-card"
+                data-category="Women"
+                data-price="899"
+                data-new="true">
+
+                <div class="product-image">
+
+                    <span class="product-badge bestseller">
+                        Bestseller
+                    </span>
+
+                    <button class="wishlist"
+                        onclick="toggleWishlist(this)">
+                        ♡
+                    </button>
+
+                    <img
+                        src="images/products/bloom.jpg"
+                        alt="Bloom Graphic Oversized T-shirt"
+                        onerror="this.style.display='none'">
+
+                    <div class="placeholder-shirt cream-shirt">
+                        🌸<br>
+                        BLOOM
+                    </div>
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <h3>
+                        Bloom Graphic Oversized T-shirt
+                    </h3>
+
+                    <strong>
+                        ₹899
+                    </strong>
+
+                    <div class="product-colours">
+
+                        <span class="dot yellow"></span>
+                        <span class="dot pink"></span>
+                        <span class="dot blue"></span>
+                        <span class="dot black"></span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PRODUCT 8 -->
+
+            <article class="product-card"
+                data-category="Women"
+                data-price="1299">
+
+                <div class="product-image">
+
+                    <button class="wishlist"
+                        onclick="toggleWishlist(this)">
+                        ♡
+                    </button>
+
+                    <img
+                        src="images/products/striped-shirt.jpg"
+                        alt="Striped Shirt"
+                        onerror="this.style.display='none'">
+
+                    <div class="placeholder-shirt striped-shirt">
+                    </div>
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <h3>
+                        Striped Shirt
+                    </h3>
+
+                    <strong>
+                        ₹1,299
+                    </strong>
+
+                    <div class="product-colours">
+
+                        <span class="dot blue"></span>
+                        <span class="dot white"></span>
+                        <span class="dot grey"></span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PRODUCT 9 -->
+
+            <article class="product-card"
+                data-category="Women"
+                data-price="799">
+
+                <div class="product-image">
+
+                    <button class="wishlist"
+                        onclick="toggleWishlist(this)">
+                        ♡
+                    </button>
+
+                    <div class="placeholder-shirt dark-shirt">
+                        MORE<br>
+                        SELF LOVE ♡
+                    </div>
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <h3>
+                        More Self Love T-shirt
+                    </h3>
+
+                    <strong>
+                        ₹799
+                    </strong>
+
+                    <div class="product-colours">
+                        <span class="dot black"></span>
+                        <span class="dot white"></span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PRODUCT 10 -->
+
+            <article class="product-card"
+                data-category="Women"
+                data-price="899">
+
+                <div class="product-image">
+
+                    <button class="wishlist"
+                        onclick="toggleWishlist(this)">
+                        ♡
+                    </button>
+
+                    <div class="placeholder-shirt beige-shirt">
+                        🧸
+                    </div>
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <h3>
+                        Soft Heart Bear T-shirt
+                    </h3>
+
+                    <strong>
+                        ₹899
+                    </strong>
+
+                    <div class="product-colours">
+                        <span class="dot beige"></span>
+                        <span class="dot pink"></span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PRODUCT 11 -->
+
+            <article class="product-card"
+                data-category="Women"
+                data-price="1199">
+
+                <div class="product-image">
+
+                    <button class="wishlist"
+                        onclick="toggleWishlist(this)">
+                        ♡
+                    </button>
+
+                    <div class="placeholder-kurti purple-kurti">
+                        ✿ ✿
+                    </div>
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <h3>
+                        Purple Floral Kurti
+                    </h3>
+
+                    <strong>
+                        ₹1,199
+                    </strong>
+
+                    <div class="product-colours">
+                        <span class="dot purple"></span>
+                        <span class="dot white"></span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PRODUCT 12 -->
+
+            <article class="product-card"
+                data-category="Accessories"
+                data-price="1099">
+
+                <div class="product-image">
+
+                    <button class="wishlist"
+                        onclick="toggleWishlist(this)">
+                        ♡
+                    </button>
+
+                    <div class="placeholder-bag">
+                        🌼
+                    </div>
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <h3>
+                        Crochet Flower Bag
+                    </h3>
+
+                    <strong>
+                        ₹1,099
+                    </strong>
+
+                    <div class="product-colours">
+                        <span class="dot cream"></span>
+                        <span class="dot yellow"></span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-brand">
+
+        <div class="footer-logo">
+            SHREE ♡
+        </div>
+
+        <p>
+            The Speciality Shop
+        </p>
+
+        <div class="socials">
+            ◎ &nbsp; ◉ &nbsp; Pinterest
+        </div>
+
+    </div>
+
+
+    <div>
+
+        <h4>Shop</h4>
+
+        <a>Women</a>
+        <a>Men</a>
+        <a>Kids</a>
+        <a>Customise</a>
+        <a>New Arrivals</a>
+
+    </div>
+
+
+    <div>
+
+        <h4>Quick Links</h4>
+
+        <a>About Us</a>
+        <a>Contact</a>
+        <a>Track Order</a>
+        <a>FAQs</a>
+        <a>Size Guide</a>
+
+    </div>
+
+
+    <div class="community">
+
+        <h4>
+            Join Our Community
+        </h4>
+
+        <p>
+            Get updates, offers & more.
+        </p>
+
+        <div class="email-box">
+
+            <input
+                type="email"
+                placeholder="Your email address">
+
+            <button>
+                →
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-benefits">
+
+        <div>
+            🚚
+            <span>
+                Free Shipping
+                <small>
+                    On orders over ₹999
+                </small>
+            </span>
+        </div>
+
+
+        <div>
+            ⟳
+            <span>
+                Easy Returns
+                <small>
+                    30-day return policy
+                </small>
+            </span>
+        </div>
+
+
+        <div>
+            ♙
+            <span>
+                Secure Payment
+                <small>
+                    100% secure checkout
+                </small>
+            </span>
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2025 Shree. All rights reserved.
+        </span>
+
+        <span>
+            Privacy Policy &nbsp; | &nbsp; Terms & Conditions
+        </span>
+
+    </div>
+
+</footer>
+
+
+
+<script src="products.js"></script>
+
+</body>
+</html>

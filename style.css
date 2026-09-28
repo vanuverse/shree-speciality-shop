@@ -1,0 +1,1864 @@
+/* =====================================================
+   SHREE – THE SPECIALITY SHOP
+   MAIN WEBSITE STYLES
+===================================================== */
+
+
+/* ================= ROOT ================= */
+
+:root {
+
+    --black: #000000;
+
+    --blue: #A2B8E3;
+
+    --yellow: #F8FA90;
+
+    --background: #fcfaf6;
+
+    --cream: #f4eee5;
+
+    --text: #171717;
+
+    --muted: #686868;
+
+    --border: #e5e0d8;
+
+}
+
+
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: "DM Sans", sans-serif;
+
+    background: var(--background);
+
+    color: var(--text);
+
+    overflow-x: hidden;
+
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+button,
+input {
+    font-family: inherit;
+}
+
+
+/* =====================================================
+   TOP BAR
+===================================================== */
+
+.top-bar {
+
+    height: 24px;
+
+    background: #111;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 3.5%;
+
+    font-size: 9px;
+
+}
+
+
+.top-social {
+
+    display: flex;
+
+    gap: 10px;
+
+    align-items: center;
+
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+
+    height: 58px;
+
+    background: #fffdf9;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 3.5%;
+
+    gap: 28px;
+
+    border-bottom: 1px solid #eee9e1;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+}
+
+
+/* LOGO */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+.logo-image {
+
+    width: 42px;
+
+    height: 42px;
+
+    object-fit: contain;
+
+
+}
+
+
+
+.logo-name {
+
+    font-family: "Patrick Hand", cursive;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    line-height: 25px;
+
+}
+
+
+.logo-tagline {
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    margin-left: 12px;
+
+}
+
+
+/* DESKTOP NAV */
+
+.desktop-nav {
+
+    display: flex;
+
+    gap: 34px;
+
+    align-items: center;
+
+    margin-left: 20px;
+
+}
+
+
+.desktop-nav a {
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    font-size: 11px;
+
+    position: relative;
+
+}
+
+
+.desktop-nav a.active::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    right: 0;
+
+    height: 2px;
+
+    background: black;
+
+}
+
+
+/* NAV ACTIONS */
+
+.nav-actions {
+
+    margin-left: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+}
+
+
+.search-box {
+
+    width: 150px;
+
+    height: 30px;
+
+    border: 1px solid #d8d3ca;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 8px;
+
+}
+
+
+.search-box input {
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    width: 100%;
+
+    font-size: 9px;
+
+}
+
+
+.search-box span {
+
+    font-size: 18px;
+
+}
+
+
+.nav-icon {
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 23px;
+
+    cursor: pointer;
+
+    position: relative;
+
+}
+
+
+.cart-icon span {
+
+    position: absolute;
+
+    top: -5px;
+
+    right: -6px;
+
+    width: 15px;
+
+    height: 15px;
+
+    border-radius: 50%;
+
+    background: var(--blue);
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 8px;
+
+}
+
+
+.menu-btn {
+
+    display: none;
+
+    border: none;
+
+    background: none;
+
+    font-size: 23px;
+
+}
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+.mobile-menu {
+
+    position: fixed;
+
+    top: 0;
+
+    left: -100%;
+
+    width: 75%;
+
+    height: 100vh;
+
+    background: white;
+
+    z-index: 500;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 80px 30px;
+
+    gap: 25px;
+
+    transition: .3s;
+
+    box-shadow: 10px 0 30px #0002;
+
+}
+
+
+.mobile-menu.open {
+
+    left: 0;
+
+}
+
+
+.mobile-menu a {
+
+    font-size: 16px;
+
+}
+
+
+.close-menu {
+
+    position: absolute;
+
+    right: 20px;
+
+    top: 20px;
+
+    border: none;
+
+    background: none;
+
+    font-size: 30px;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    min-height: 315px;
+
+    background: #f1ece3;
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding-left: 8%;
+
+}
+
+
+.hero-content {
+
+    width: 43%;
+
+    z-index: 5;
+
+}
+
+
+.hero-small {
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    font-weight: 600;
+
+    margin-bottom: 14px;
+
+}
+
+
+.hero h1 {
+
+    font-family: "Patrick Hand", cursive;
+
+    font-size: 52px;
+
+    line-height: .9;
+
+    font-weight: 500;
+
+}
+
+
+.hero h1 span {
+
+    position: relative;
+
+}
+
+
+.hero h1 span::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: -4px;
+
+    height: 6px;
+
+    background: var(--yellow);
+
+    z-index: -1;
+
+}
+
+
+.hero-description {
+
+    font-family: "Patrick Hand", cursive;
+
+    font-size: 20px;
+
+    margin: 18px 0;
+
+}
+
+
+.black-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    background: #050505;
+
+    color: white;
+
+    padding: 12px 22px;
+
+    border-radius: 4px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+}
+
+
+.black-btn span {
+
+    font-size: 17px;
+
+}
+
+
+/* HERO IMAGE */
+
+.hero-image {
+
+    flex: 1;
+
+    height: 315px;
+
+    position: relative;
+
+    background: linear-gradient(
+        110deg,
+        #f1ece3,
+        #e9e0d4
+    );
+
+}
+
+
+.clothes {
+
+    position: absolute;
+
+    width: 400px;
+
+    height: 250px;
+
+    left: 17%;
+
+    top: 30px;
+
+}
+
+
+.hanger {
+
+    position: absolute;
+
+    top: -30px;
+
+    left: 60px;
+
+    font-size: 120px;
+
+    opacity: .5;
+
+}
+
+
+.shirt {
+
+    position: absolute;
+
+    width: 115px;
+
+    height: 135px;
+
+    top: 35px;
+
+    border-radius: 18px 18px 30px 30px;
+
+    clip-path: polygon(
+        25% 0,
+        42% 10%,
+        58% 10%,
+        75% 0,
+        100% 25%,
+        84% 45%,
+        76% 35%,
+        76% 100%,
+        24% 100%,
+        24% 35%,
+        16% 45%,
+        0 25%
+    );
+
+}
+
+
+.cream-shirt {
+
+    left: 80px;
+
+    background: #f6f0e6;
+
+    z-index: 3;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+}
+
+
+.purple-shirt {
+
+    left: 145px;
+
+    top: 28px;
+
+    background: #b7a6ca;
+
+    z-index: 2;
+
+}
+
+
+.blue-shirt {
+
+    left: 205px;
+
+    top: 25px;
+
+    background: #91add0;
+
+    z-index: 1;
+
+}
+
+
+.hero-star {
+
+    position: absolute;
+
+    top: 35px;
+
+    left: 12%;
+
+    font-size: 30px;
+
+}
+
+
+.hero-heart {
+
+    position: absolute;
+
+    bottom: 30px;
+
+    right: 18%;
+
+    font-size: 35px;
+
+}
+
+
+.hero-note {
+
+    position: absolute;
+
+    right: 5%;
+
+    top: 100px;
+
+    font-family: "Patrick Hand";
+
+    font-size: 21px;
+
+    transform: rotate(-5deg);
+
+}
+
+
+.slider-dots {
+
+    position: absolute;
+
+    bottom: 8px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: white;
+
+    padding: 5px 9px;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    gap: 6px;
+
+}
+
+
+.slider-dots span {
+
+    width: 7px;
+
+    height: 7px;
+
+    border: 1px solid black;
+
+    border-radius: 50%;
+
+}
+
+
+.slider-dots .selected {
+
+    background: black;
+
+}
+
+
+/* =====================================================
+   COMMON SECTION
+===================================================== */
+
+.section {
+
+    padding: 25px 3.5% 5px;
+
+}
+
+
+.section-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    margin-bottom: 17px;
+
+}
+
+
+.section-heading h2 {
+
+    font-size: 15px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.section-heading a {
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+}
+
+
+.heading-line {
+
+    width: 45px;
+
+    height: 4px;
+
+    background: var(--blue);
+
+    transform: skew(-20deg);
+
+    margin-top: 4px;
+
+}
+
+
+/* =====================================================
+   CATEGORIES
+===================================================== */
+
+.category-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    gap: 12px;
+
+}
+
+
+.category-card {
+
+    min-height: 100px;
+
+    background: #f4f0ea;
+
+    border-radius: 9px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    transition: .2s;
+
+}
+
+
+.category-card:hover {
+
+    transform: translateY(-4px);
+
+}
+
+
+.category-icon {
+
+    width: 54px;
+
+    height: 54px;
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 28px;
+
+}
+
+
+.category-card p {
+
+    font-size: 10px;
+
+}
+
+
+.pink {
+    background: #efd7ee;
+}
+
+.blue {
+    background: #c5d8f2;
+}
+
+.yellow {
+    background: #f7e99c;
+}
+
+.lavender {
+    background: #d7d5f1;
+}
+
+.peach {
+    background: #f3cbd1;
+}
+
+.mint {
+    background: #c9e4d9;
+}
+
+
+/* =====================================================
+   PRODUCTS
+===================================================== */
+
+.product-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 16px;
+
+}
+
+
+.product-card {
+
+    cursor: pointer;
+
+}
+
+
+.product-image {
+
+    height: 185px;
+
+    background: #e8e0d6;
+
+    border-radius: 8px;
+
+    display: grid;
+
+    place-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.product-image.dark {
+
+    background: #d9d5ce;
+
+}
+
+
+.product-image.purple-bg {
+
+    background: #dfd6d0;
+
+}
+
+
+.wishlist {
+
+    position: absolute;
+
+    top: 7px;
+
+    right: 7px;
+
+    width: 23px;
+
+    height: 23px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: white;
+
+    cursor: pointer;
+
+    z-index: 5;
+
+}
+
+
+.wishlist.active {
+
+    background: var(--yellow);
+
+}
+
+
+.product-shirt {
+
+    width: 105px;
+
+    height: 128px;
+
+    clip-path: polygon(
+        24% 0,
+        42% 10%,
+        58% 10%,
+        76% 0,
+        100% 23%,
+        84% 45%,
+        76% 34%,
+        76% 100%,
+        24% 100%,
+        24% 34%,
+        16% 45%,
+        0 23%
+    );
+
+    display: grid;
+
+    place-items: center;
+
+    text-align: center;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+}
+
+
+.product-shirt.white {
+
+    background: #f7f3ea;
+
+}
+
+
+.product-shirt.black {
+
+    background: #151515;
+
+    color: white;
+
+}
+
+
+.product-shirt.purple {
+
+    background: #a990c4;
+
+    font-size: 25px;
+
+}
+
+
+.mock-kurti {
+
+    width: 90px;
+
+    height: 140px;
+
+    border-radius:
+        45% 45% 15px 15px;
+
+    background: #e5ded1;
+
+    display: grid;
+
+    place-items: center;
+
+    text-align: center;
+
+    font-size: 28px;
+
+    color: #6b8ba8;
+
+}
+
+
+.mock-bag {
+
+    width: 105px;
+
+    height: 110px;
+
+    border: 6px solid #b9b09d;
+
+    border-radius: 10px 10px 18px 18px;
+
+    display: grid;
+
+    place-items: center;
+
+    color: #79976c;
+
+    font-size: 23px;
+
+}
+
+
+.product-info {
+
+    padding: 8px 4px;
+
+}
+
+
+.product-info h3 {
+
+    font-size: 10px;
+
+    line-height: 1.4;
+
+    font-weight: 500;
+
+}
+
+
+.product-info strong {
+
+    display: block;
+
+    font-size: 11px;
+
+    margin-top: 5px;
+
+}
+
+
+.colors {
+
+    display: flex;
+
+    gap: 5px;
+
+    margin-top: 6px;
+
+}
+
+
+.colors i {
+
+    width: 9px;
+
+    height: 9px;
+
+    border-radius: 50%;
+
+    border: 1px solid #aaa;
+
+    background: #24378c;
+
+}
+
+
+.colors i:nth-child(2) {
+    background: #e5d4c0;
+}
+
+.colors i:nth-child(3) {
+    background: #9276a9;
+}
+
+.colors i:nth-child(4) {
+    background: #111;
+}
+
+.colors i:nth-child(5) {
+    background: #f3eab4;
+}
+
+
+/* =====================================================
+   CUSTOMISE BANNER
+===================================================== */
+
+.customise-banner {
+
+    margin: 25px 3.5% 0;
+
+    min-height: 145px;
+
+    background: var(--blue);
+
+    border-radius: 7px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 15px 4%;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.customise-text {
+
+    width: 35%;
+
+}
+
+
+.customise-text h2 {
+
+    font-family: "Patrick Hand";
+
+    font-size: 32px;
+
+    line-height: .85;
+
+}
+
+
+.customise-text p {
+
+    font-family: "Patrick Hand";
+
+    font-size: 14px;
+
+    margin: 8px 0;
+
+}
+
+
+.custom-shirts {
+
+    width: 35%;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+
+.custom-shirt {
+
+    width: 85px;
+
+    height: 95px;
+
+    background: #eeeae1;
+
+    border: 2px solid #222;
+
+    clip-path: polygon(
+        22% 0,
+        42% 12%,
+        58% 12%,
+        78% 0,
+        100% 24%,
+        84% 43%,
+        76% 34%,
+        76% 100%,
+        24% 100%,
+        24% 34%,
+        16% 43%,
+        0 24%
+    );
+
+    display: grid;
+
+    place-items: center;
+
+    text-align: center;
+
+    font-size: 9px;
+
+}
+
+
+.custom-shirt.plain {
+
+    margin-left: -12px;
+
+    transform: rotate(5deg);
+
+}
+
+
+.custom-points {
+
+    font-size: 10px;
+
+    line-height: 1.9;
+
+}
+
+
+/* =====================================================
+   BENEFITS
+===================================================== */
+
+.benefits {
+
+    margin: 0 3.5%;
+
+    padding: 20px 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+}
+
+
+.benefit {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 18px;
+
+    border-right: 1px solid #d7d2ca;
+
+}
+
+
+.benefit:last-child {
+
+    border-right: none;
+
+}
+
+
+.benefit span {
+
+    font-size: 24px;
+
+}
+
+
+.benefit b,
+.benefit small {
+
+    display: block;
+
+}
+
+
+.benefit b {
+
+    font-size: 10px;
+
+}
+
+
+.benefit small {
+
+    font-size: 8px;
+
+    color: #666;
+
+    margin-top: 3px;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    background: #111;
+
+    color: white;
+
+}
+
+
+.footer-content {
+
+    padding: 22px 3.5%;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr .8fr .9fr 1.7fr .7fr;
+
+    gap: 25px;
+
+}
+
+
+.footer-logo {
+
+    font-family: "Patrick Hand";
+
+    font-size: 25px;
+
+}
+
+
+.footer-brand small {
+
+    color: #aaa;
+
+    font-size: 8px;
+
+}
+
+
+.footer-column {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+}
+
+
+.footer-column h4,
+.newsletter h4 {
+
+    font-size: 9px;
+
+    margin-bottom: 3px;
+
+}
+
+
+.footer-column a,
+.newsletter p {
+
+    color: #aaa;
+
+    font-size: 8px;
+
+}
+
+
+.email-box {
+
+    height: 26px;
+
+    max-width: 220px;
+
+    border: 1px solid #777;
+
+    display: flex;
+
+    margin-top: 8px;
+
+}
+
+
+.email-box input {
+
+    background: transparent;
+
+    border: none;
+
+    outline: none;
+
+    color: white;
+
+    width: 100%;
+
+    padding: 5px;
+
+    font-size: 8px;
+
+}
+
+
+.email-box button {
+
+    width: 30px;
+
+    border: none;
+
+}
+
+
+.social-icons {
+
+    text-align: right;
+
+}
+
+
+.footer-bottom {
+
+    border-top: 1px solid #333;
+
+    padding: 8px 3.5%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 7px;
+
+    color: #888;
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media(max-width:900px) {
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .search-box {
+        display: none;
+    }
+
+    .category-grid {
+        grid-template-columns:
+            repeat(4, 1fr);
+    }
+
+    .product-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .benefits {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px) {
+
+    .top-bar {
+
+        padding: 0 12px;
+
+        font-size: 7px;
+
+    }
+
+
+    .top-social {
+
+        display: none;
+
+    }
+
+
+    .navbar {
+
+        padding: 0 15px;
+
+        gap: 12px;
+
+    }
+
+
+    .logo {
+
+        min-width: auto;
+
+    }
+
+
+    .logo-name {
+
+        font-size: 25px;
+
+    }
+
+
+    .logo-tagline {
+
+        font-size: 7px;
+
+    }
+
+
+    .nav-actions {
+
+        gap: 7px;
+
+    }
+
+
+    .nav-icon {
+
+        font-size: 20px;
+
+    }
+
+
+    /* HERO */
+
+    .hero {
+
+        min-height: 245px;
+
+        padding-left: 16px;
+
+    }
+
+
+    .hero-content {
+
+        width: 55%;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 33px;
+
+    }
+
+
+    .hero-description {
+
+        font-size: 14px;
+
+    }
+
+
+    .hero-image {
+
+        position: absolute;
+
+        right: -20%;
+
+        width: 62%;
+
+        height: 245px;
+
+    }
+
+
+    .clothes {
+
+        left: 5%;
+
+        transform: scale(.75);
+
+    }
+
+
+    .hero-note {
+
+        font-size: 13px;
+
+        right: 3%;
+
+    }
+
+
+    /* CATEGORY */
+
+    .section {
+
+        padding: 20px 12px 4px;
+
+    }
+
+
+    .category-grid {
+
+        grid-template-columns:
+            repeat(4, 1fr);
+
+        gap: 7px;
+
+    }
+
+
+    .category-card {
+
+        min-height: 75px;
+
+    }
+
+
+    .category-icon {
+
+        width: 37px;
+
+        height: 37px;
+
+        font-size: 20px;
+
+    }
+
+
+    .category-card p {
+
+        font-size: 8px;
+
+    }
+
+
+    /* PRODUCTS */
+
+    .product-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 10px;
+
+    }
+
+
+    .product-image {
+
+        height: 155px;
+
+    }
+
+
+    /* CUSTOMISE */
+
+    .customise-banner {
+
+        margin: 20px 12px 0;
+
+        min-height: 155px;
+
+        padding: 15px;
+
+    }
+
+
+    .customise-text {
+
+        width: 55%;
+
+    }
+
+
+    .customise-text h2 {
+
+        font-size: 26px;
+
+    }
+
+
+    .custom-shirts {
+
+        position: absolute;
+
+        right: 5px;
+
+        top: 30px;
+
+        width: 43%;
+
+    }
+
+
+    .custom-points {
+
+        position: absolute;
+
+        left: 15px;
+
+        bottom: 10px;
+
+        font-size: 7px;
+
+    }
+
+
+    /* BENEFITS */
+
+    .benefits {
+
+        margin: 0 12px;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .benefit {
+
+        padding: 10px 5px;
+
+    }
+
+
+    .benefit span {
+
+        font-size: 18px;
+
+    }
+
+
+    .benefit b {
+
+        font-size: 8px;
+
+    }
+
+
+    .benefit small {
+
+        font-size: 6px;
+
+    }
+
+
+    /* FOOTER */
+
+    .footer-content {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        padding: 20px 18px;
+
+    }
+
+
+    .newsletter {
+
+        grid-column: 1 / -1;
+
+    }
+
+
+    .social-icons {
+
+        display: none;
+
+    }
+
+
+    .footer-bottom {
+
+        font-size: 6px;
+
+        padding: 8px 12px;
+
+    }
+
+}
+
+.product-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    display: block;
+}
+

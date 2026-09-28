@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Couple T-Shirt | SHREE</title>
+
+    <link rel="stylesheet" href="product-details.css">
+    <link rel="stylesheet" href="couple-product.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">SHREE</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Shop</a>
+        <a href="customise.html">Customise</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="nav-icons">
+        <span>⌕</span>
+        <a href="wishlist.html">♡</a>
+        <a href="login.html">♙</a>
+        <a href="cart.html">🛒</a>
+    </div>
+
+</header>
+
+
+<!-- ================= PRODUCT ================= -->
+
+<main class="couple-product">
+
+    <!-- LEFT : PRODUCT IMAGE -->
+
+    <section class="couple-image-section">
+
+        <div class="product-image-box">
+
+            <span class="couple-badge">
+                COUPLE
+            </span>
+
+            <div class="couple-placeholder">
+                <span>♡</span>
+                <h2>COUPLE<br>T-SHIRTS</h2>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RIGHT : PRODUCT DETAILS -->
+
+    <section class="couple-details">
+
+        <p class="category">
+            COUPLE COLLECTION
+        </p>
+
+        <h1>
+            Butterflies Couple T-Shirt
+        </h1>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9</span>
+        </div>
+
+        <div class="price">
+            ₹1,499
+        </div>
+
+        <p class="description">
+            Matching couple T-shirts designed to celebrate
+            your own personality together.
+        </p>
+
+
+        <!-- ================= PERSON 1 ================= -->
+
+        <div class="person-box">
+
+            <h2>
+                Person 1
+            </h2>
+
+            <!-- SIZE -->
+
+            <div class="option-section">
+
+                <label>
+                    Select Size
+                </label>
+
+                <div class="size-options person1-size">
+
+                    <button data-size="XS">XS</button>
+                    <button data-size="S">S</button>
+                    <button data-size="M">M</button>
+                    <button data-size="L">L</button>
+                    <button data-size="XL">XL</button>
+                    <button data-size="XXL">XXL</button>
+
+                </div>
+
+            </div>
+
+
+            <!-- COLOUR -->
+
+            <div class="option-section">
+
+                <label>
+                    Select Colour
+                </label>
+
+                <div class="colour-options person1-colour">
+
+                    <button
+                        class="colour black"
+                        data-colour="Black">
+                    </button>
+
+                    <button
+                        class="colour white"
+                        data-colour="White">
+                    </button>
+
+                    <button
+                        class="colour blue"
+                        data-colour="Sky Blue">
+                    </button>
+
+                    <button
+                        class="colour pink"
+                        data-colour="Pink">
+                    </button>
+
+                </div>
+
+                <p class="selected-text" id="person1Colour">
+                    Select colour
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= PERSON 2 ================= -->
+
+        <div class="person-box">
+
+            <h2>
+                Person 2
+            </h2>
+
+            <!-- SIZE -->
+
+            <div class="option-section">
+
+                <label>
+                    Select Size
+                </label>
+
+                <div class="size-options person2-size">
+
+                    <button data-size="XS">XS</button>
+                    <button data-size="S">S</button>
+                    <button data-size="M">M</button>
+                    <button data-size="L">L</button>
+                    <button data-size="XL">XL</button>
+                    <button data-size="XXL">XXL</button>
+
+                </div>
+
+            </div>
+
+
+            <!-- COLOUR -->
+
+            <div class="option-section">
+
+                <label>
+                    Select Colour
+                </label>
+
+                <div class="colour-options person2-colour">
+
+                    <button
+                        class="colour black"
+                        data-colour="Black">
+                    </button>
+
+                    <button
+                        class="colour white"
+                        data-colour="White">
+                    </button>
+
+                    <button
+                        class="colour blue"
+                        data-colour="Sky Blue">
+                    </button>
+
+                    <button
+                        class="colour pink"
+                        data-colour="Pink">
+                    </button>
+
+                </div>
+
+                <p class="selected-text" id="person2Colour">
+                    Select colour
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= QUANTITY ================= -->
+
+        <div class="quantity-section">
+
+            <label>
+                Quantity
+            </label>
+
+            <div class="quantity">
+
+                <button id="minus">
+                    −
+                </button>
+
+                <span id="quantity">
+                    1
+                </span>
+
+                <button id="plus">
+                    +
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= SUMMARY ================= -->
+
+        <div class="couple-summary">
+
+            <h3>
+                Couple Set Summary
+            </h3>
+
+            <p>
+                Person 1:
+                <span id="summaryP1">
+                    Select size & colour
+                </span>
+            </p>
+
+            <p>
+                Person 2:
+                <span id="summaryP2">
+                    Select size & colour
+                </span>
+            </p>
+
+            <p>
+                Quantity:
+                <span id="summaryQty">
+                    1
+                </span>
+            </p>
+
+        </div>
+
+
+        <!-- ================= BUTTON ================= -->
+
+        <button
+            class="add-couple-cart"
+            id="addCoupleCart">
+
+            🛒 Add Couple Set to Cart
+
+        </button>
+
+        <button
+            class="wishlist-btn"
+            id="wishlistBtn">
+
+            ♡ Add to Wishlist
+
+        </button>
+
+        <p
+            class="error-message"
+            id="errorMessage">
+        </p>
+
+    </section>
+
+</main>
+
+
+<!-- ================= JS ================= -->
+
+<script src="couple-product.js"></script>
+
+</body>
+</html>

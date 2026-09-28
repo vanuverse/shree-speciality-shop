@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | SHREE – The Speciality Shop</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ================= TOP BAR ================= -->
+
+<div class="top-bar">
+
+    <div class="shipping">
+        <i class="fa-solid fa-truck"></i>
+        Free Shipping on orders over ₹999
+    </div>
+
+    <div class="top-links">
+        <a href="#">Track Order</a>
+        <span>|</span>
+        <a href="#">Help</a>
+        <span>|</span>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-pinterest"></i>
+    </div>
+
+</div>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <a href="index.html" class="logo">
+        <strong>SHREE ♡</strong>
+        <small>The Speciality Shop</small>
+    </a>
+
+    <nav>
+        <a href="index.html">Home</a>
+
+        <a href="products.html">
+            Shop <i class="fa-solid fa-chevron-down"></i>
+        </a>
+
+        <a href="#">Customise</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="nav-right">
+
+        <div class="search-box">
+            <input type="text" placeholder="Search for your vibe...">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <i class="fa-regular fa-heart nav-icon"></i>
+        <i class="fa-regular fa-user nav-icon"></i>
+
+        <div class="cart-icon">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span>2</span>
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- ================= CHECKOUT HERO ================= -->
+
+<section class="checkout-hero">
+
+    <div class="hero-text">
+
+        <h1>Checkout</h1>
+
+        <p>
+            Almost there! Your favourite fits are on the way ♡
+        </p>
+
+    </div>
+
+    <div class="hero-doodle">
+        <span>Good<br>Things<br>Take<br>Time</span>
+        <span class="sparkle">✦</span>
+        <span class="heart">♡</span>
+    </div>
+
+</section>
+
+
+<!-- ================= CHECKOUT STEPS ================= -->
+
+<div class="checkout-steps">
+
+    <div class="step active">
+        <span>1</span>
+        <p>Delivery Details</p>
+    </div>
+
+    <div class="step-line"></div>
+
+    <div class="step">
+        <span>2</span>
+        <p>Payment</p>
+    </div>
+
+    <div class="step-line"></div>
+
+    <div class="step">
+        <span>3</span>
+        <p>Review & Place Order</p>
+    </div>
+
+    <div class="step-line"></div>
+
+    <div class="step">
+        <span>4</span>
+        <p>Order Confirmation</p>
+    </div>
+
+</div>
+
+
+<!-- ================= MAIN CHECKOUT ================= -->
+
+<main class="checkout-container">
+
+
+    <!-- ===== DELIVERY DETAILS ===== -->
+
+    <section class="delivery-card">
+
+        <div class="section-heading">
+
+            <i class="fa-regular fa-location-dot"></i>
+
+            <div>
+                <h2>Delivery Details</h2>
+                <p>Enter your shipping address</p>
+            </div>
+
+        </div>
+
+
+        <form id="checkoutForm">
+
+            <div class="form-group">
+
+                <label>Full Name *</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Mobile Number *</label>
+
+                <input
+                    type="tel"
+                    id="mobile"
+                    placeholder="Enter mobile number"
+                    maxlength="10"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Pincode *</label>
+
+                <input
+                    type="text"
+                    id="pincode"
+                    placeholder="Enter pincode"
+                    maxlength="6"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Address Line 1 *</label>
+
+                <input
+                    type="text"
+                    id="address1"
+                    placeholder="House / Building / Street"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Address Line 2 <span>(Optional)</span></label>
+
+                <input
+                    type="text"
+                    id="address2"
+                    placeholder="Area / Landmark"
+                >
+
+            </div>
+
+
+            <div class="city-state">
+
+                <div class="form-group">
+
+                    <label>City *</label>
+
+                    <input
+                        type="text"
+                        id="city"
+                        placeholder="City"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>State *</label>
+
+                    <select id="state" required>
+
+                        <option value="">Select State</option>
+                        <option>Maharashtra</option>
+                        <option>Gujarat</option>
+                        <option>Delhi</option>
+                        <option>Karnataka</option>
+                        <option>Tamil Nadu</option>
+                        <option>Rajasthan</option>
+                        <option>West Bengal</option>
+                        <option>Other</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <label class="save-address">
+
+                <input type="checkbox" checked>
+
+                <span>Save this address for next time</span>
+
+            </label>
+
+
+            <button
+                type="button"
+                class="continue-btn"
+                onclick="continuePayment()"
+            >
+
+                Continue to Payment
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+
+            <a href="cart.html" class="back-cart">
+                ← Back to Cart
+            </a>
+
+        </form>
+
+    </section>
+
+
+
+    <!-- ===== ORDER SUMMARY ===== -->
+
+    <section class="summary-column">
+
+        <div class="summary-card">
+
+            <div class="summary-title">
+
+                <h2>Order Summary</h2>
+
+                <span>2 Items</span>
+
+            </div>
+
+
+            <!-- PRODUCT 1 -->
+
+            <div class="checkout-product">
+
+                <img src="images/butterfly-tshirt.jpg"
+                     alt="Butterfly Vibes T-shirt">
+
+                <div class="product-info">
+
+                    <h3>Butterfly Vibes<br>Oversized T-shirt</h3>
+
+                    <p>Lavender | M</p>
+
+                </div>
+
+                <strong>₹899</strong>
+
+                <div class="quantity">
+
+                    <button onclick="changeQty(this,-1)">−</button>
+
+                    <span>1</span>
+
+                    <button onclick="changeQty(this,1)">+</button>
+
+                    <button class="delete">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 2 -->
+
+            <div class="checkout-product">
+
+                <img src="images/good-things-tshirt.jpg"
+                     alt="Good Things T-shirt">
+
+                <div class="product-info">
+
+                    <h3>Good Things<br>T-shirt</h3>
+
+                    <p>White | L</p>
+
+                </div>
+
+                <strong>₹799</strong>
+
+                <div class="quantity">
+
+                    <button onclick="changeQty(this,-1)">−</button>
+
+                    <span>1</span>
+
+                    <button onclick="changeQty(this,1)">+</button>
+
+                    <button class="delete">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- COUPON -->
+
+            <div class="coupon-box">
+
+                <label>
+                    <i class="fa-solid fa-tag"></i>
+                    Have a coupon code?
+                </label>
+
+                <div class="coupon-input">
+
+                    <input
+                        type="text"
+                        id="coupon"
+                        placeholder="Enter coupon code"
+                    >
+
+                    <button onclick="applyCoupon()">Apply</button>
+
+                </div>
+
+                <p id="coupon-message"></p>
+
+            </div>
+
+
+            <!-- TOTAL -->
+
+            <div class="price-summary">
+
+                <div>
+                    <span>Subtotal (2 items)</span>
+                    <strong>₹1,698</strong>
+                </div>
+
+                <div>
+                    <span>Shipping Charges</span>
+                    <strong>₹99</strong>
+                </div>
+
+                <div>
+                    <span>Coupon Discount</span>
+                    <strong>− ₹0</strong>
+                </div>
+
+                <hr>
+
+                <div class="total">
+
+                    <span>Total Amount</span>
+                    <strong>₹1,797</strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ===== PAYMENT ===== -->
+
+        <div class="payment-card">
+
+            <div class="payment-heading">
+
+                <h2>
+                    <i class="fa-regular fa-credit-card"></i>
+                    Payment Method
+                </h2>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </div>
+
+
+            <label class="payment-option">
+
+                <input
+                    type="radio"
+                    name="payment"
+                    value="upi"
+                    checked
+                >
+
+                <span>UPI</span>
+
+                <small>
+                    Google Pay, PhonePe, Paytm, etc.
+                </small>
+
+                <strong class="upi-text">UPI</strong>
+
+            </label>
+
+
+            <label class="payment-option">
+
+                <input
+                    type="radio"
+                    name="payment"
+                    value="card"
+                >
+
+                <span>Card</span>
+
+                <small>Visa / Mastercard / RuPay</small>
+
+                <strong>VISA&nbsp;&nbsp;●</strong>
+
+            </label>
+
+
+            <label class="payment-option">
+
+                <input
+                    type="radio"
+                    name="payment"
+                    value="cod"
+                >
+
+                <span>Cash on Delivery</span>
+
+                <i class="fa-regular fa-money-bill-1"></i>
+
+            </label>
+
+
+            <label class="payment-option">
+
+                <input
+                    type="radio"
+                    name="payment"
+                    value="netbanking"
+                >
+
+                <span>Net Banking</span>
+
+                <i class="fa-solid fa-building-columns"></i>
+
+            </label>
+
+
+            <button
+                class="place-order"
+                onclick="placeOrder()"
+            >
+
+                <i class="fa-solid fa-lock"></i>
+
+                Place Order
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+
+            <p class="secure-text">
+                <i class="fa-solid fa-lock"></i>
+                Your payment information is 100% secure
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ===== SIDE MESSAGE ===== -->
+
+    <aside class="checkout-note">
+
+        <div class="note-content">
+
+            <h3>
+                Small<br>
+                steps
+                <br>
+                Big<br>
+                dreams
+                ✦
+            </h3>
+
+            <div class="flower">❀</div>
+
+            <div class="thankyou">
+
+                <p>
+                    Thank you<br>
+                    for supporting<br>
+                    our small<br>
+                    business ♡
+                </p>
+
+            </div>
+
+
+            <div class="shirt-doodle">
+                ♡
+                <br>
+                <span>SHREE</span>
+                <small>The Speciality Shop</small>
+            </div>
+
+        </div>
+
+    </aside>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-brand">
+
+        <h2>SHREE ♡</h2>
+        <p>The Speciality Shop</p>
+
+        <div class="socials">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-pinterest"></i>
+        </div>
+
+    </div>
+
+
+    <div class="footer-column">
+
+        <h4>Shop</h4>
+
+        <a href="#">Women</a>
+        <a href="#">Men</a>
+        <a href="#">Kids</a>
+        <a href="#">Customise</a>
+        <a href="#">New Arrivals</a>
+
+    </div>
+
+
+    <div class="footer-column">
+
+        <h4>Quick Links</h4>
+
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+        <a href="#">Track Order</a>
+        <a href="#">FAQs</a>
+        <a href="#">Size Guide</a>
+
+    </div>
+
+
+    <div class="newsletter">
+
+        <h4>Join Our Community</h4>
+
+        <p>Get updates, offers & more.</p>
+
+        <div>
+
+            <input
+                type="email"
+                placeholder="Your email address"
+            >
+
+            <button>→</button>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-benefits">
+
+        <div>
+            <i class="fa-solid fa-truck"></i>
+            <span>
+                <b>Free Shipping</b>
+                On orders over ₹999
+            </span>
+        </div>
+
+        <div>
+            <i class="fa-solid fa-rotate"></i>
+            <span>
+                <b>Easy Returns</b>
+                30-day return policy
+            </span>
+        </div>
+
+        <div>
+            <i class="fa-solid fa-lock"></i>
+            <span>
+                <b>Secure Payment</b>
+                100% secure checkout
+            </span>
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>© 2025 Shree. All rights reserved.</span>
+
+        <span>
+            Privacy Policy&nbsp;&nbsp; | &nbsp;&nbsp;
+            Terms & Conditions
+        </span>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+/* ================= QUANTITY ================= */
+
+function changeQty(button, change) {
+
+    const quantityBox = button.parentElement;
+    const number = quantityBox.querySelector("span");
+
+    let quantity = parseInt(number.innerText);
+
+    quantity += change;
+
+    if (quantity < 1) {
+        quantity = 1;
+    }
+
+    number.innerText = quantity;
+}
+
+
+/* ================= COUPON ================= */
+
+function applyCoupon() {
+
+    const coupon =
+        document.getElementById("coupon").value
+        .trim()
+        .toUpperCase();
+
+    const message =
+        document.getElementById("coupon-message");
+
+    if (coupon === "SHREE10") {
+
+        message.innerText =
+            "Coupon applied! You saved ₹180.";
+
+        message.style.color = "#4d7c59";
+
+    } else if (coupon === "") {
+
+        message.innerText =
+            "Please enter a coupon code.";
+
+        message.style.color = "#b33";
+
+    } else {
+
+        message.innerText =
+            "Invalid coupon code.";
+
+        message.style.color = "#b33";
+    }
+}
+
+
+/* ================= PAYMENT ================= */
+
+function continuePayment() {
+
+    const form =
+        document.getElementById("checkoutForm");
+
+    if (!form.checkValidity()) {
+
+        form.reportValidity();
+        return;
+
+    }
+
+    window.scrollTo({
+        top: document.querySelector(".payment-card").offsetTop - 100,
+        behavior: "smooth"
+    });
+
+}
+
+
+/* ================= PLACE ORDER ================= */
+
+function placeOrder() {
+
+    const selectedPayment =
+        document.querySelector(
+            'input[name="payment"]:checked'
+        );
+
+    if (!selectedPayment) {
+
+        alert("Please select a payment method.");
+        return;
+
+    }
+
+    alert(
+        "Thank you for shopping with SHREE ♡\n\n" +
+        "Your order is ready to be placed."
+    );
+
+}
+
+<button type="button" class="place-order" onclick="startRazorpayPayment()">
+    <i class="fa-solid fa-lock"></i>
+    Pay Securely
+    <i class="fa-solid fa-arrow-right"></i>
+</button>
+
+</script>
+
+</body>
+</html>

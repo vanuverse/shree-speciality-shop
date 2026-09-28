@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Butterfly Vibes Oversized T-shirt | SHREE</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product-details.css">
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Patrick+Hand&display=swap"
+        rel="stylesheet">
+</head>
+
+
+<body>
+
+
+<!-- ================= TOP BAR ================= -->
+
+<div class="top-bar">
+
+    <p>🚚 &nbsp; Free Shipping on orders over ₹999</p>
+
+    <div>
+        <span>Track Order</span>
+        <span>|</span>
+        <span>Help</span>
+        <span>|</span>
+        <span>◎</span>
+        <span>◉</span>
+        <span>◌</span>
+    </div>
+
+</div>
+
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <button class="menu-btn"
+        onclick="openMenu()">
+        ☰
+    </button>
+
+
+    <a href="index.html"
+        class="logo">
+
+        <div class="logo-name">
+            SHREE ♡
+        </div>
+
+        <div class="logo-tagline">
+            The Speciality Shop
+        </div>
+
+    </a>
+
+
+    <nav class="desktop-nav">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="products.html"
+            class="active">
+            Shop
+        </a>
+
+        <a href="#">
+            Customise
+        </a>
+
+        <a href="#">
+            About Us
+        </a>
+
+        <a href="#">
+            Contact
+        </a>
+
+    </nav>
+
+
+    <div class="nav-actions">
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                placeholder="Search for your vibe...">
+
+            <span>⌕</span>
+
+        </div>
+
+        <button class="nav-icon">
+            ♡
+        </button>
+
+        <button class="nav-icon">
+            ♙
+        </button>
+
+        <button class="nav-icon cart-icon"
+            onclick="location.href='cart.html'">
+
+            ♧
+
+            <span id="cartCount">
+                0
+            </span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- ================= MOBILE MENU ================= -->
+
+<div class="mobile-menu"
+    id="mobileMenu">
+
+    <button class="close-menu"
+        onclick="closeMenu()">
+        ×
+    </button>
+
+    <a href="index.html">Home</a>
+
+    <a href="products.html">Shop</a>
+
+    <a href="#">Customise</a>
+
+    <a href="#">About Us</a>
+
+    <a href="#">Contact</a>
+
+    <a href="login.html">Account</a>
+
+</div>
+
+
+
+<!-- ================= BREADCRUMB ================= -->
+
+<div class="breadcrumb">
+
+    <a href="index.html">Home</a>
+
+    <span>›</span>
+
+    <a href="products.html">Shop</a>
+
+    <span>›</span>
+
+    <a href="#">Women</a>
+
+    <span>›</span>
+
+    <a href="#">T-shirts</a>
+
+    <span>›</span>
+
+    <strong>
+        Butterfly Vibes Oversized T-shirt
+    </strong>
+
+</div>
+
+
+
+<!-- ================= PRODUCT SECTION ================= -->
+
+<main class="product-page">
+
+
+    <!-- ================= PRODUCT IMAGES ================= -->
+
+    <section class="product-gallery">
+
+
+        <div class="thumbnail-list">
+
+            <button class="thumbnail active"
+                onclick="changeImage('images/products/butterfly-1.jpg', this)">
+
+                <img
+                    src="images/products/butterfly-1.jpg"
+                    alt="Butterfly T-shirt">
+
+            </button>
+
+
+            <button class="thumbnail"
+                onclick="changeImage('images/products/butterfly-2.jpg', this)">
+
+                <img
+                    src="images/products/butterfly-2.jpg"
+                    alt="Butterfly T-shirt back">
+
+            </button>
+
+
+            <button class="thumbnail"
+                onclick="changeImage('images/products/butterfly-3.jpg', this)">
+
+                <img
+                    src="images/products/butterfly-3.jpg"
+                    alt="Butterfly print">
+
+            </button>
+
+
+            <button class="thumbnail"
+                onclick="changeImage('images/products/butterfly-4.jpg', this)">
+
+                <img
+                    src="images/products/butterfly-4.jpg"
+                    alt="T-shirt fabric">
+
+            </button>
+
+
+            <button class="thumbnail"
+                onclick="changeImage('images/products/butterfly-5.jpg', this)">
+
+                <img
+                    src="images/products/butterfly-5.jpg"
+                    alt="T-shirt detail">
+
+            </button>
+
+        </div>
+
+
+
+        <div class="main-product-image">
+
+            <img
+                id="mainProductImage"
+                src="images/products/butterfly-1.jpg"
+                alt="Butterfly Vibes Oversized T-shirt">
+
+
+            <button class="main-wishlist"
+                onclick="toggleWishlist(this)">
+
+                ♡
+
+            </button>
+
+
+            <div class="image-note">
+
+                Same<br>
+                vibe,<br>
+                new designs...<br>
+                ♡
+
+            </div>
+
+
+            <div class="image-arrows">
+
+                <button onclick="previousImage()">
+                    ‹
+                </button>
+
+                <span id="imageNumber">
+                    1 / 5
+                </span>
+
+                <button onclick="nextImage()">
+                    ›
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= PRODUCT INFO ================= -->
+
+    <section class="product-info-page">
+
+
+        <span class="badge">
+            Bestseller
+        </span>
+
+
+        <h1>
+            Butterfly Vibes ♡
+            <br>
+            <span>Oversized T-shirt</span>
+        </h1>
+
+
+        <div class="price">
+
+            ₹899
+
+            <small>
+                (Incl. of all taxes)
+            </small>
+
+        </div>
+
+
+        <div class="rating">
+
+            <span class="stars">
+                ★★★★★
+            </span>
+
+            <strong>
+                4.8
+            </strong>
+
+            <span>
+                (120 reviews)
+            </span>
+
+        </div>
+
+
+        <p class="product-description">
+
+            Soft, breathable and made for your
+            everyday fits. This oversized tee
+            brings the perfect mix of comfort
+            and cute vibes!
+
+        </p>
+
+
+
+        <!-- ================= COLOUR ================= -->
+
+        <div class="option-section">
+
+            <div class="option-title">
+
+                Colour:
+                <strong id="selectedColour">
+                    Lavender
+                </strong>
+
+            </div>
+
+
+            <div class="colour-options">
+
+                <button
+                    class="colour lavender selected"
+                    data-colour="Lavender"
+                    onclick="selectColour(this)">
+                </button>
+
+                <button
+                    class="colour cream"
+                    data-colour="Cream"
+                    onclick="selectColour(this)">
+                </button>
+
+                <button
+                    class="colour black"
+                    data-colour="Black"
+                    onclick="selectColour(this)">
+                </button>
+
+                <button
+                    class="colour pink"
+                    data-colour="Pink"
+                    onclick="selectColour(this)">
+                </button>
+
+                <button
+                    class="colour sky"
+                    data-colour="Sky Blue"
+                    onclick="selectColour(this)">
+                </button>
+
+                <button
+                    class="colour beige"
+                    data-colour="Beige"
+                    onclick="selectColour(this)">
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= SIZE ================= -->
+
+        <div class="option-section">
+
+            <div class="size-title">
+
+                <span>
+                    Size:
+                    <strong id="selectedSize">
+                        M
+                    </strong>
+                </span>
+
+                <a href="#">
+                    Size Guide
+                </a>
+
+            </div>
+
+
+            <div class="size-options">
+
+                <button onclick="selectSize(this)">
+                    XS
+                </button>
+
+                <button onclick="selectSize(this)">
+                    S
+                </button>
+
+                <button
+                    class="selected"
+                    onclick="selectSize(this)">
+                    M
+                </button>
+
+                <button onclick="selectSize(this)">
+                    L
+                </button>
+
+                <button onclick="selectSize(this)">
+                    XL
+                </button>
+
+                <button onclick="selectSize(this)">
+                    XXL
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= QUANTITY ================= -->
+
+        <div class="quantity-section">
+
+            <p>
+                Quantity:
+            </p>
+
+            <div class="quantity-box">
+
+                <button onclick="decreaseQty()">
+                    −
+                </button>
+
+                <span id="quantity">
+                    1
+                </span>
+
+                <button onclick="increaseQty()">
+                    +
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= ACTION BUTTONS ================= -->
+
+        <div class="product-buttons">
+
+            <button
+                class="add-cart"
+                onclick="addProductToCart()">
+
+                🛒
+                Add to Cart
+
+            </button>
+
+
+            <button
+                class="add-wishlist"
+                onclick="toggleWishlist(this)">
+
+                ♡
+                Add to Wishlist
+
+            </button>
+
+        </div>
+
+
+
+        <!-- ================= BENEFITS ================= -->
+
+        <div class="mini-benefits">
+
+            <div>
+
+                <span>♧</span>
+
+                <p>
+                    <b>Free Shipping</b>
+                    <small>On orders over ₹999</small>
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <span>⟳</span>
+
+                <p>
+                    <b>Easy Returns</b>
+                    <small>30-day return policy</small>
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <span>♙</span>
+
+                <p>
+                    <b>Secure Payment</b>
+                    <small>100% secure checkout</small>
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- ================= PRODUCT DETAILS ================= -->
+
+<section class="details-section">
+
+
+    <div class="details-tabs">
+
+        <button class="active">
+            Product Details
+        </button>
+
+        <button>
+            Size & Fit
+        </button>
+
+        <button>
+            Shipping & Returns
+        </button>
+
+        <button>
+            Reviews
+        </button>
+
+    </div>
+
+
+    <div class="details-content">
+
+
+        <div class="description">
+
+            <h3>
+                Product Description
+            </h3>
+
+            <p>
+                A dreamy lavender oversized T-shirt
+                with a bold butterfly print.
+                Made from premium cotton, it is
+                soft, breathable and perfect for
+                all-day comfort.
+            </p>
+
+
+            <ul>
+
+                <li>
+                    100% compact cotton
+                </li>
+
+                <li>
+                    Oversized fit
+                </li>
+
+                <li>
+                    Premium quality DTF print
+                </li>
+
+                <li>
+                    Unisex style
+                </li>
+
+                <li>
+                    Made in India
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <div class="detail-images">
+
+            <div>
+
+                <img
+                    src="images/products/butterfly-print.jpg"
+                    alt="DTF print">
+
+                <p>
+                    DTF print
+                    <br>
+                    (long lasting)
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <img
+                    src="images/products/butterfly-neck.jpg"
+                    alt="Crew neck">
+
+                <p>
+                    Comfortable
+                    <br>
+                    crew neck
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <img
+                    src="images/products/butterfly-fabric.jpg"
+                    alt="Cotton fabric">
+
+                <p>
+                    Soft & breathable
+                    <br>
+                    cotton
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= YOU MAY ALSO LIKE ================= -->
+
+<section class="related-products">
+
+    <div class="related-heading">
+
+        <div>
+
+            <h2>
+                You May Also Like ♡
+            </h2>
+
+            <div class="yellow-line"></div>
+
+        </div>
+
+        <a href="products.html">
+            View All →
+        </a>
+
+    </div>
+
+
+
+    <div class="related-grid">
+
+
+        <div class="related-card">
+
+            <div class="related-image">
+                <button>♡</button>
+                <div class="related-shirt cream">
+                    GOOD<br>
+                    THINGS<br>
+                    TAKE TIME
+                </div>
+            </div>
+
+            <h4>
+                Good Things Take Time
+            </h4>
+
+            <p>
+                Oversized T-shirt
+            </p>
+
+            <strong>
+                ₹799
+            </strong>
+
+        </div>
+
+
+        <div class="related-card">
+
+            <div class="related-image pink-bg">
+
+                <button>♡</button>
+
+                <div class="related-shirt pink-shirt">
+                    ✿
+                </div>
+
+            </div>
+
+            <h4>
+                Flower Power
+            </h4>
+
+            <p>
+                Oversized T-shirt
+            </p>
+
+            <strong>
+                ₹899
+            </strong>
+
+        </div>
+
+
+        <div class="related-card">
+
+            <div class="related-image">
+
+                <button>♡</button>
+
+                <div class="related-shirt black-shirt">
+                    MORE<br>
+                    SELF LOVE
+                </div>
+
+            </div>
+
+            <h4>
+                More Self Love
+            </h4>
+
+            <p>
+                Oversized T-shirt
+            </p>
+
+            <strong>
+                ₹799
+            </strong>
+
+        </div>
+
+
+        <div class="related-card">
+
+            <div class="related-image blue-bg">
+
+                <button>♡</button>
+
+                <div class="related-shirt striped">
+                </div>
+
+            </div>
+
+            <h4>
+                Striped Shirt
+            </h4>
+
+            <p>
+                Casual Shirt
+            </p>
+
+            <strong>
+                ₹1,299
+            </strong>
+
+        </div>
+
+
+        <div class="related-card">
+
+            <div class="related-image">
+
+                <button>♡</button>
+
+                <div class="related-kurti">
+                    ✿
+                </div>
+
+            </div>
+
+            <h4>
+                Floral Block Print Kurti
+            </h4>
+
+            <p>
+                Women's Kurti
+            </p>
+
+            <strong>
+                ₹1,299
+            </strong>
+
+        </div>
+
+
+        <div class="related-card">
+
+            <div class="related-image purple-bg">
+
+                <button>♡</button>
+
+                <div class="related-shirt purple-shirt">
+                    🦋
+                </div>
+
+            </div>
+
+            <h4>
+                Butterflies Couple Tee
+            </h4>
+
+            <p>
+                Couple T-shirt
+            </p>
+
+            <strong>
+                ₹1,499
+            </strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= BOTTOM BRAND STRIP ================= -->
+
+<div class="brand-strip">
+
+    <span>
+        ✧ Wear Your
+        <br>
+        Own Personality ♡
+    </span>
+
+    <span>✦</span>
+    <span>♡</span>
+    <span>✧</span>
+
+</div>
+
+
+
+<script src="product-details.js"></script>
+
+</body>
+</html>

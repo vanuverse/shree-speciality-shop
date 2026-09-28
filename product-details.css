@@ -1,0 +1,1262 @@
+/* =====================================================
+   SHREE PRODUCT DETAILS PAGE
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    background: #fbf9f4;
+}
+
+
+/* ================= BREADCRUMB ================= */
+
+.breadcrumb {
+
+    padding: 12px 3.5%;
+
+    display: flex;
+
+    gap: 10px;
+
+    align-items: center;
+
+    font-size: 9px;
+
+    color: #777;
+
+}
+
+
+.breadcrumb strong {
+    color: #333;
+    font-weight: 500;
+}
+
+
+/* ================= PRODUCT PAGE ================= */
+
+.product-page {
+
+    padding: 0 3.5% 35px;
+
+    display: grid;
+
+    grid-template-columns: 55% 45%;
+
+    gap: 25px;
+
+}
+
+
+/* ================= GALLERY ================= */
+
+.product-gallery {
+
+    display: grid;
+
+    grid-template-columns: 65px 1fr;
+
+    gap: 15px;
+
+}
+
+
+.thumbnail-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+
+}
+
+
+.thumbnail {
+
+    width: 63px;
+
+    height: 63px;
+
+    border: 1px solid #eee;
+
+    border-radius: 7px;
+
+    background: #eee8df;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    padding: 0;
+
+}
+
+
+.thumbnail.active {
+
+    border: 2px solid #7895d1;
+
+}
+
+
+.thumbnail img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.main-product-image {
+
+    height: 400px;
+
+    background: #e8e0d6;
+
+    border-radius: 8px;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.main-product-image > img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.main-wishlist {
+
+    position: absolute;
+
+    top: 12px;
+
+    right: 12px;
+
+    width: 35px;
+
+    height: 35px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: white;
+
+    font-size: 21px;
+
+    cursor: pointer;
+
+}
+
+
+.main-wishlist.active {
+
+    background: #f8fa90;
+
+}
+
+
+.image-note {
+
+    position: absolute;
+
+    top: 35px;
+
+    left: 35px;
+
+    font-family: "Patrick Hand";
+
+    font-size: 22px;
+
+    line-height: .95;
+
+    transform: rotate(-7deg);
+
+}
+
+
+.image-arrows {
+
+    position: absolute;
+
+    right: 10px;
+
+    bottom: 10px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    height: 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 7px;
+
+}
+
+
+.image-arrows button {
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+}
+
+
+.image-arrows span {
+
+    font-size: 9px;
+
+}
+
+
+/* ================= PRODUCT INFORMATION ================= */
+
+.product-info-page {
+
+    padding: 5px 20px;
+
+}
+
+
+.badge {
+
+    display: inline-block;
+
+    background: #a9bce8;
+
+    color: #18284e;
+
+    border-radius: 5px;
+
+    padding: 4px 9px;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+}
+
+
+.product-info-page h1 {
+
+    font-family: "Patrick Hand";
+
+    font-size: 34px;
+
+    line-height: .9;
+
+    font-weight: 500;
+
+    margin: 8px 0 10px;
+
+}
+
+
+.product-info-page h1 span {
+
+    font-size: 27px;
+
+}
+
+
+.price {
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+}
+
+
+.price small {
+
+    font-size: 9px;
+
+    font-weight: 400;
+
+    color: #666;
+
+}
+
+
+.rating {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin: 8px 0 14px;
+
+    font-size: 10px;
+
+}
+
+
+.stars {
+
+    letter-spacing: 2px;
+
+    font-size: 14px;
+
+}
+
+
+.product-description {
+
+    max-width: 440px;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+
+    color: #555;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* ================= OPTIONS ================= */
+
+.option-section {
+
+    margin: 15px 0;
+
+}
+
+
+.option-title {
+
+    font-size: 11px;
+
+    margin-bottom: 9px;
+
+}
+
+
+.option-title strong {
+
+    margin-left: 5px;
+
+}
+
+
+.colour-options {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+
+.colour {
+
+    width: 25px;
+
+    height: 25px;
+
+    border-radius: 50%;
+
+    border: 2px solid white;
+
+    outline: 1px solid transparent;
+
+    cursor: pointer;
+
+}
+
+
+.colour.selected {
+
+    outline: 2px solid #5874aa;
+
+    outline-offset: 2px;
+
+}
+
+
+.lavender {
+    background: #b59bc9;
+}
+
+.cream {
+    background: #eeeae0;
+}
+
+.black {
+    background: #111;
+}
+
+.pink {
+    background: #ee9dbb;
+}
+
+.sky {
+    background: #91bce0;
+}
+
+.beige {
+    background: #d9cbb2;
+}
+
+
+/* ================= SIZE ================= */
+
+.size-title {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 11px;
+
+    margin-bottom: 9px;
+
+}
+
+
+.size-title a {
+
+    color: #5874aa;
+
+    text-decoration: underline;
+
+}
+
+
+.size-options {
+
+    display: flex;
+
+    gap: 7px;
+
+}
+
+
+.size-options button {
+
+    min-width: 42px;
+
+    height: 30px;
+
+    border: 1px solid #ddd8cf;
+
+    background: #fbf9f4;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 10px;
+
+}
+
+
+.size-options button.selected {
+
+    border: 2px solid #5874aa;
+
+    color: #284675;
+
+}
+
+
+/* ================= QUANTITY ================= */
+
+.quantity-section {
+
+    margin: 16px 0;
+
+}
+
+
+.quantity-section > p {
+
+    font-size: 11px;
+
+    margin-bottom: 7px;
+
+}
+
+
+.quantity-box {
+
+    width: 100px;
+
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border: 1px solid #ddd8cf;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+}
+
+
+.quantity-box button {
+
+    border: none;
+
+    background: transparent;
+
+    width: 32px;
+
+    height: 100%;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+}
+
+
+.quantity-box span {
+
+    font-size: 11px;
+
+}
+
+
+/* ================= PRODUCT BUTTONS ================= */
+
+.product-buttons {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+
+    margin: 15px 0;
+
+}
+
+
+.add-cart,
+.add-wishlist {
+
+    height: 40px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+}
+
+
+.add-cart {
+
+    background: #050505;
+
+    color: white;
+
+    border: 1px solid #050505;
+
+}
+
+
+.add-wishlist {
+
+    background: transparent;
+
+    border: 1px solid #999;
+
+}
+
+
+/* ================= MINI BENEFITS ================= */
+
+.mini-benefits {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 10px;
+
+    margin-top: 18px;
+
+}
+
+
+.mini-benefits > div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+}
+
+
+.mini-benefits span {
+
+    font-size: 20px;
+
+}
+
+
+.mini-benefits b {
+
+    display: block;
+
+    font-size: 8px;
+
+}
+
+
+.mini-benefits small {
+
+    display: block;
+
+    font-size: 6px;
+
+    color: #777;
+
+    margin-top: 2px;
+
+}
+
+
+/* ================= DETAILS ================= */
+
+.details-section {
+
+    margin: 0 3.5%;
+
+    border-top: 1px solid #ded9d0;
+
+    padding-top: 0;
+
+}
+
+
+.details-tabs {
+
+    display: flex;
+
+    gap: 38px;
+
+    border-bottom: 1px solid #ddd8d0;
+
+}
+
+
+.details-tabs button {
+
+    border: none;
+
+    background: transparent;
+
+    padding: 13px 0;
+
+    font-size: 9px;
+
+    cursor: pointer;
+
+    position: relative;
+
+}
+
+
+.details-tabs button.active {
+
+    color: #41639e;
+
+    font-weight: 700;
+
+}
+
+
+.details-tabs button.active::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: -1px;
+
+    left: 0;
+
+    right: 0;
+
+    height: 2px;
+
+    background: #41639e;
+
+}
+
+
+.details-content {
+
+    display: grid;
+
+    grid-template-columns: 38% 62%;
+
+    gap: 30px;
+
+    padding: 17px 0 20px;
+
+}
+
+
+.description h3 {
+
+    font-size: 11px;
+
+    margin-bottom: 9px;
+
+}
+
+
+.description p {
+
+    font-size: 9px;
+
+    line-height: 1.7;
+
+    color: #666;
+
+    max-width: 360px;
+
+}
+
+
+.description ul {
+
+    list-style: none;
+
+    margin-top: 10px;
+
+}
+
+
+.description li {
+
+    font-size: 9px;
+
+    margin: 6px 0;
+
+}
+
+
+.description li::before {
+
+    content: "✓";
+
+    margin-right: 7px;
+
+    font-weight: bold;
+
+}
+
+
+/* ================= DETAIL IMAGES ================= */
+
+.detail-images {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+
+}
+
+
+.detail-images img {
+
+    width: 100%;
+
+    height: 120px;
+
+    object-fit: cover;
+
+    border-radius: 5px;
+
+}
+
+
+.detail-images p {
+
+    font-family: "Patrick Hand";
+
+    font-size: 10px;
+
+    margin-top: 5px;
+
+}
+
+
+/* ================= RELATED PRODUCTS ================= */
+
+.related-products {
+
+    padding: 5px 3.5% 15px;
+
+}
+
+
+.related-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    margin-bottom: 14px;
+
+}
+
+
+.related-heading h2 {
+
+    font-family: "Patrick Hand";
+
+    font-size: 25px;
+
+    font-weight: 500;
+
+}
+
+
+.related-heading a {
+
+    font-size: 9px;
+
+}
+
+
+.yellow-line {
+
+    width: 60px;
+
+    height: 5px;
+
+    background: var(--yellow);
+
+    transform: rotate(-3deg);
+
+}
+
+
+.related-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, 1fr);
+
+    gap: 13px;
+
+}
+
+
+.related-image {
+
+    height: 130px;
+
+    background: #e8e0d6;
+
+    border-radius: 6px;
+
+    display: grid;
+
+    place-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.related-image button {
+
+    position: absolute;
+
+    top: 6px;
+
+    right: 6px;
+
+    width: 22px;
+
+    height: 22px;
+
+    border: none;
+
+    background: white;
+
+    border-radius: 50%;
+
+    z-index: 2;
+
+}
+
+
+.related-shirt {
+
+    width: 75px;
+
+    height: 90px;
+
+    clip-path: polygon(
+        24% 0,
+        42% 10%,
+        58% 10%,
+        76% 0,
+        100% 23%,
+        84% 45%,
+        76% 34%,
+        76% 100%,
+        24% 100%,
+        24% 34%,
+        16% 45%,
+        0 23%
+    );
+
+    display: grid;
+
+    place-items: center;
+
+    text-align: center;
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+}
+
+
+.related-shirt.cream {
+
+    background: #f5f1e7;
+
+}
+
+
+.related-shirt.pink-shirt {
+
+    background: #ee9eaf;
+
+    font-size: 22px;
+
+}
+
+
+.related-shirt.black-shirt {
+
+    background: #151515;
+
+    color: white;
+
+}
+
+
+.related-shirt.striped {
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            #8ca9c9 0 7px,
+            #edf0ed 7px 14px
+        );
+
+}
+
+
+.related-shirt.purple-shirt {
+
+    background: #a990c4;
+
+    font-size: 20px;
+
+}
+
+
+.related-kurti {
+
+    width: 68px;
+
+    height: 100px;
+
+    border-radius: 40% 40% 10px 10px;
+
+    background: #e4ded1;
+
+    display: grid;
+
+    place-items: center;
+
+    color: #6884a0;
+
+}
+
+
+.pink-bg {
+    background: #eadcd8;
+}
+
+.blue-bg {
+    background: #dddcd8;
+}
+
+.purple-bg {
+    background: #ddd4d2;
+}
+
+
+.related-card h4 {
+
+    font-size: 8px;
+
+    margin-top: 6px;
+
+}
+
+
+.related-card p {
+
+    font-size: 7px;
+
+    color: #777;
+
+    margin-top: 2px;
+
+}
+
+
+.related-card strong {
+
+    font-size: 9px;
+
+    display: block;
+
+    margin-top: 3px;
+
+}
+
+
+/* ================= BRAND STRIP ================= */
+
+.brand-strip {
+
+    min-height: 55px;
+
+    background: var(--blue);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-around;
+
+    font-family: "Patrick Hand";
+
+    font-size: 17px;
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width: 700px) {
+
+
+    .top-bar {
+
+        font-size: 7px;
+
+    }
+
+
+    .breadcrumb {
+
+        padding: 9px 15px;
+
+        overflow: hidden;
+
+        white-space: nowrap;
+
+    }
+
+
+    .product-page {
+
+        display: block;
+
+        padding: 0 15px 25px;
+
+    }
+
+
+    .product-gallery {
+
+        display: block;
+
+    }
+
+
+    .thumbnail-list {
+
+        display: none;
+
+    }
+
+
+    .main-product-image {
+
+        height: 390px;
+
+    }
+
+
+    .product-info-page {
+
+        padding: 18px 0 0;
+
+    }
+
+
+    .product-info-page h1 {
+
+        font-size: 31px;
+
+    }
+
+
+    .product-info-page h1 span {
+
+        font-size: 24px;
+
+    }
+
+
+    .product-description {
+
+        max-width: 100%;
+
+    }
+
+
+    .mini-benefits {
+
+        margin-bottom: 15px;
+
+    }
+
+
+    .details-section {
+
+        margin: 0 15px;
+
+    }
+
+
+    .details-tabs {
+
+        gap: 20px;
+
+        overflow-x: auto;
+
+    }
+
+
+    .details-tabs button {
+
+        white-space: nowrap;
+
+    }
+
+
+    .details-content {
+
+        display: block;
+
+    }
+
+
+    .detail-images {
+
+        margin-top: 20px;
+
+    }
+
+
+    .related-products {
+
+        padding: 10px 15px;
+
+    }
+
+
+    .related-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .related-image {
+
+        height: 160px;
+
+    }
+
+
+    .brand-strip {
+
+        font-size: 14px;
+
+    }
+
+}

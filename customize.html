@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customise Your Own | SHREE</title>
+
+    <link rel="stylesheet" href="customise.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">SHREE</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Shop</a>
+        <a href="customise.html" class="active">Customise</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="nav-icons">
+        <a href="wishlist.html">♡</a>
+        <a href="login.html">♙</a>
+        <a href="cart.html">🛒</a>
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="custom-hero">
+
+    <div>
+
+        <p class="small-title">
+            SHREE CUSTOMISE
+        </p>
+
+        <h1>
+            Wear Your
+            <span>Own Personality.</span>
+        </h1>
+
+        <p>
+            Create something that is completely yours.
+            Choose your product, add your design,
+            write your text and make it SHREE.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CUSTOMISER ================= -->
+
+<main class="customiser">
+
+    <!-- LEFT PREVIEW -->
+
+    <section class="preview-section">
+
+        <div class="preview-card">
+
+            <div class="preview-tshirt" id="tshirtPreview">
+
+                <div
+                    class="print-preview"
+                    id="printPreview">
+
+                    Your Design
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <p class="preview-note">
+            Live preview
+        </p>
+
+    </section>
+
+
+    <!-- RIGHT OPTIONS -->
+
+    <section class="custom-options">
+
+        <h2>
+            Create Your T-Shirt
+        </h2>
+
+        <p class="subtext">
+            Select your options below.
+        </p>
+
+
+        <!-- PRODUCT -->
+
+        <div class="option-group">
+
+            <label>
+                Product
+            </label>
+
+            <select id="product">
+
+                <option value="T-Shirt">
+                    T-Shirt
+                </option>
+
+                <option value="Oversized T-Shirt">
+                    Oversized T-Shirt
+                </option>
+
+                <option value="Crop T-Shirt">
+                    Crop T-Shirt
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- COLOUR -->
+
+        <div class="option-group">
+
+            <label>
+                T-Shirt Colour
+            </label>
+
+            <div class="shirt-colours">
+
+                <button
+                    class="shirt-colour black selected"
+                    data-colour="Black">
+                </button>
+
+                <button
+                    class="shirt-colour white"
+                    data-colour="White">
+                </button>
+
+                <button
+                    class="shirt-colour blue"
+                    data-colour="Sky Blue">
+                </button>
+
+                <button
+                    class="shirt-colour pink"
+                    data-colour="Pink">
+                </button>
+
+                <button
+                    class="shirt-colour cream"
+                    data-colour="Cream">
+                </button>
+
+            </div>
+
+            <p id="colourName">
+                Black
+            </p>
+
+        </div>
+
+
+        <!-- SIZE -->
+
+        <div class="option-group">
+
+            <label>
+                Size
+            </label>
+
+            <div class="sizes">
+
+                <button data-size="XS">XS</button>
+                <button data-size="S">S</button>
+                <button data-size="M" class="selected">M</button>
+                <button data-size="L">L</button>
+                <button data-size="XL">XL</button>
+                <button data-size="XXL">XXL</button>
+
+            </div>
+
+        </div>
+
+
+        <!-- UPLOAD -->
+
+        <div class="option-group">
+
+            <label>
+                Upload Your Design
+            </label>
+
+            <div class="upload-box">
+
+                <input
+                    type="file"
+                    id="designUpload"
+                    accept="image/png,image/jpeg,image/webp">
+
+                <span>
+                    + Upload Image
+                </span>
+
+                <small>
+                    PNG / JPG / WEBP
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- TEXT -->
+
+        <div class="option-group">
+
+            <label>
+                Add Your Text
+            </label>
+
+            <input
+                type="text"
+                id="customText"
+                placeholder="Write something..."
+                maxlength="40">
+
+        </div>
+
+
+        <!-- PLACEMENT -->
+
+        <div class="option-group">
+
+            <label>
+                Print Placement
+            </label>
+
+            <select id="placement">
+
+                <option value="Front">
+                    Front
+                </option>
+
+                <option value="Back">
+                    Back
+                </option>
+
+                <option value="Left Chest">
+                    Left Chest
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- QUANTITY -->
+
+        <div class="option-group">
+
+            <label>
+                Quantity
+            </label>
+
+            <div class="quantity">
+
+                <button id="minus">
+                    −
+                </button>
+
+                <span id="quantity">
+                    1
+                </span>
+
+                <button id="plus">
+                    +
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRICE -->
+
+        <div class="price-box">
+
+            <span>
+                Total
+            </span>
+
+            <strong id="totalPrice">
+                ₹799
+            </strong>
+
+        </div>
+
+
+        <!-- CART -->
+
+        <button
+            class="add-cart"
+            id="addToCart">
+
+            🛒 Add Customised Product to Cart
+
+        </button>
+
+        <p
+            id="errorMessage"
+            class="error-message">
+        </p>
+
+    </section>
+
+</main>
+
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section class="how-section">
+
+    <p class="small-title">
+        HOW IT WORKS
+    </p>
+
+    <h2>
+        Create. Customise. Wear.
+    </h2>
+
+    <div class="steps">
+
+        <div>
+            <span>01</span>
+            <h3>Choose</h3>
+            <p>Select your product, colour and size.</p>
+        </div>
+
+        <div>
+            <span>02</span>
+            <h3>Design</h3>
+            <p>Upload your design or add your text.</p>
+        </div>
+
+        <div>
+            <span>03</span>
+            <h3>Order</h3>
+            <p>Add it to cart and complete checkout.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="footer-logo">
+        SHREE
+    </div>
+
+    <p>
+        Wear Your Own Personality
+    </p>
+
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Shop</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <small>
+        © 2026 SHREE – The Speciality Shop
+    </small>
+
+</footer>
+
+<styl src="customize.css"></styl>
+
+<script src="customise.js"></script>
+
+</body>
+</html>
